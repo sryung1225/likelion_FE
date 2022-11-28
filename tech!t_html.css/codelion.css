@@ -1,0 +1,98 @@
+/* Personal : reset */
+html, body, div, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+}
+section, footer {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* Lecture : codelion.css */
+* {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+body {
+    min-width: fit-content;
+}
+section {
+    margin-bottom: 24px;
+}
+.mainbox {
+    width: 610px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1); 
+}
+.title-box {
+    text-align: right;
+}
+.name {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+}
+.career {
+    color: #7c7c7c;
+    font-size: 16px;
+    font-weight: 700;
+}
+.sub-title {
+    margin-bottom: 16px;
+    padding-bottom: 5px;
+    color: #282828;
+    font-size: 20px;
+    font-weight: 300;
+    border-bottom: 1px solid #ebebeb;
+}
+.about-me-text {
+    font-size: 10px;
+    line-height: 16px;
+}
+.float-wrap {
+    overflow: hidden;
+    /* float 으로 띄워진 요소들을 묶어주고
+    그 다음에 오는 요소들이 float의 영향을 받지 않도록 함 (겹치지 않도록 함) */
+    margin-bottom: 4px;
+}
+.title-text,
+.year-text {
+    color: #282828;
+    font-size: 11px;
+    font-weight: 700;
+}
+.title-text {
+    float: left;
+}
+.year-text {
+    float: right;
+}
+.desc-text {
+    margin-bottom: 6px;
+    font-size: 9px;   
+}
+.desc-subtext {
+    margin-bottom: 8px;
+    padding-left: 16px;
+    color: #282828;
+    font-size: 9px;
+}
+.sns-wrap {
+    text-align: right;
+}
+.sns-img {
+    width: 12px;
+    height: 12px;
+}
+footer {
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #919191;
+    text-align: center;
+}

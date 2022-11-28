@@ -1,0 +1,15 @@
+.box1, .box2 {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+.box1 {
+    padding: 20px;
+    margin: 20px;
+    background-color: skyblue;
+    border: 5px solid black;
+}
+.box2 {
+    background-color: violet;
+    border: 5px solid black;
+}
