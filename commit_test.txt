@@ -1,0 +1,2 @@
+git config --global user.name "sryung"
+테스트용 파일
