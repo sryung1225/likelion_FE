@@ -19,4 +19,4 @@
 
 ### HTML/CSS
 - 22/11/30/WED - ing
-- directory : [/html_css/](html_css/)
+- directory : [/html5/](html5/)
