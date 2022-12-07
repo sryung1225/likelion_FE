@@ -167,11 +167,28 @@ a {
 /* header 끝 */     
 
 /* visual */
+@keyframes moveEffect {
+    0% {
+        font-size: 12px;
+        color: rgba(0,0,0,0.2);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0,0,0,1);
+        transform: translate(400px, 75px);
+    }
+}
 .visual {
-    background: orange;
-    height: 10vh;
+    background: pink;
+    height: 120px;
+}
+.visual-text {
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: moveEffect forwards 2s;
 }
 
+/* main */
 .main {
     background: lightgreen;
     height: 50vh;
