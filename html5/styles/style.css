@@ -41,6 +41,7 @@ a {
     margin: 0 auto;
 }
 
+/* header */
 .header {
     background: #fff;
     padding: 0 30px;
@@ -52,6 +53,7 @@ a {
     position: absolute;
     top: 45px;
     left: 60px;
+    z-index: 10;
 }
 
 /* member */
@@ -74,7 +76,7 @@ a {
 
 /* menu */
 .navigation {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 .menu {
     background: #e85e2c linear-gradient(to bottom, #ef9126 0%, #e85e2c 35%, #e85e2c 70%, #ef9126 100%);
@@ -83,7 +85,11 @@ a {
     padding-left: 230px;
     height: 47px;
 }
+.menu > li:nth-child(-n+3) {
+    position: relative;
+}
 .menu-item {
+    position: relative;
     float: left;
     border-left: 2px solid #fff;
 }
@@ -95,14 +101,71 @@ a {
     color: #fff;
     font-size: 15px;
     font-weight: 700;
-    text-shadow: 1px 1px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+.is-active .menu-button {
+    color: #ff0;
+}
+.is-active .menu-button::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #000;
 }
 .sub-menu {
     display: none;
     position: absolute;
-    background-color: pink;
+    top: 47px;
+    padding: 4px 0;
 }
+.is-active .sub-menu {
+    display: block;
+    white-space: nowrap;
+}
+.sub-menu li {
+    display: inline-block;
+}
+.menu-html,
+.menu-css,
+.menu-standards {
+  left: 0;
+}
+.menu-accessibility,
+.menu-qna,
+.menu-archive {
+  right: 0;
+}
+.sub-menu a {
+    display: inline-block;
+    padding: 6px 0;
+}
+.sub-menu a::before {
+    content: "\e803";
+    font-family: 'fontello';
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.sub-menu a:hover,
+.sub-menu a:focus {
+    color: coral;
+}
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
+    content: "\e800";
+}
+/* header 끝 */     
 
+/* visual */
 .visual {
     background: orange;
     height: 10vh;
