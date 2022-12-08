@@ -24,11 +24,12 @@ html {
 body {
     font-size: 1.4rem;
     color: #212121;
-    background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
     font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", 
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", 
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    /*  */
+    background: url("./images/bg_flower.png") no-repeat 50% 0, #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%) repeat 0 0;
 }
 
 /* layout */
@@ -178,13 +179,40 @@ body {
     }
 }
 .visual {
-    background: pink;
+    position: relative;
     height: 120px;
 }
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.visual::before {
+    background: url(./images/ani_flower_01.png) 0 -10px no-repeat, 
+                url(./images/ani_flower_02.png) 600px 0 no-repeat;
+    animation: fadeInOut 4s infinite;
+}
+.visual::after {
+    background: url(./images/ani_flower_03.png) 300px -20px no-repeat, 
+                url(./images/ani_flower_04.png) 800px 60px no-repeat;
+    animation: fadeInOut 4s 2s infinite;
+}
 .visual-text {
-    display: inline-block;
+    position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    animation: moveEffect forwards 2s;
+    animation: moveEffect forwards 400ms ease-in-out;
 }
 
 /* main */
