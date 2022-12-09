@@ -2,7 +2,7 @@
 @import url(./reset.css);
 @import url(./fontello.css);
 
-.a11y-hidden {
+.a11y-hidden, legend {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -217,17 +217,17 @@ body {
 
 /* main */
 .main {
-    background: lightgreen;
-    height: 50vh;
+    background: #fff;
+    min-height: 450px;
     display: flow-root;
-    padding: 0 15px;
+    padding: 30px 15px;
+    border-radius: 15px 15px 0 0;
 }
 .group {
     margin: 0 15px;
     float: left;
 }
 .group1 {
-    background-color: violet;
     width: 250px;
 }
 .group2 {
@@ -239,6 +239,79 @@ body {
     width: 190px;
 }
 
+/* login */
+.login {
+    background: orange radial-gradient(at right top, #ef9126, #e85e2c);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px #a6a6a6;
+}
+.login-title {
+    color: yellow;
+    font-weight: bold;
+    font-size: 15px;
+    text-indent: 10px;
+}
+.login-form {
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin-top: 10px;
+    padding: 10px 10px 0;
+}
+.login-form div {
+    margin-bottom: 5px;
+}
+.login-form fieldset {
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a6a6a6;
+}
+.login-form label {
+    display: inline-block;
+    width: 50px;
+}
+.login-form input {
+    padding: 3px 3px 3px 5px;
+    width: 90px;
+    height: 24px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+}
+.login-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 53px;
+    background-color: #e85e2c;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    color: #fff;
+}
+.login-sign {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    display: flow-root;
+}
+.login-sign .signup {
+    float: left;
+}
+.login-sign .signin {
+    float: right;
+}
+.login-sign a {
+    font-size: .9em;
+    letter-spacing: -.2px;
+}
+.login-sign a::before {
+    content: "\e802";
+    margin-right: 8px;
+    font-family: 'fontello';
+    color: #e85e2c;
+}
+
+/* slogan */
 .slogan {
     background: skyblue;
     height: 10vh;
