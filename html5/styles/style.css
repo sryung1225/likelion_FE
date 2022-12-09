@@ -311,6 +311,24 @@ body {
     color: #e85e2c;
 }
 
+/* Validation */
+.valid-list {
+    margin-top: 25px;
+}
+.valid-list li + li {
+    margin-top: 10px;
+}
+.valid-list a {
+    display: block;
+    padding: 10px 0 10px 40px;
+    background: url(./images/validation_icon.png) no-repeat 20px 50%, linear-gradient(to bottom, #ccc 0%, #eee 100%);
+    border: 1px solid #a6a6a6;
+    border-radius: 19px;
+}
+.valid-list a:hover {
+    color: orangered;
+}
+
 /* slogan */
 .slogan {
     background: skyblue;
