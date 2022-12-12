@@ -151,11 +151,11 @@
                         </fieldset> 
                     </form>
                     <div class="board">
-                        <ul class="tablist" role="tablist">
-                            <li role="none"><button type="button" class="tab" id="noticeButton" aria-controls="notice" aria-selected="true">공지사항</button></li>
-                            <li role="none"><button type="button" class="tab" id="archiveButton" aria-controls="archive" aria-selected="false">자료실</button></li>
-                        </ul>
-                        <section id="notice" class="notice tabpanel" role="tabpanel" aria-labelledby="noticeButton">
+                        <div class="tablist" role="tablist">
+                            <button type="button" class="tab" id="noticeButton" aria-controls="notice" aria-selected="true">공지사항</button>
+                            <button type="button" class="tab" id="archiveButton" aria-controls="archive" aria-selected="false">자료실</button>
+                        </div>
+                        <section id="notice" class="notice tabpanel is-select" role="tabpanel" aria-labelledby="noticeButton">
                             <h2 class="a11y-hidden">공지사항</h2>
                             <ul class="board-list">
                                 <li>

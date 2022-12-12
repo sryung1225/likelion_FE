@@ -409,6 +409,18 @@ body {
     color: #fff;
 }
 
+/* tab */
+.board {
+    background-color: yellow;
+    margin-top: 20px;
+}
+.tabpanel {
+    display: none;
+}
+.is-select.tabpanel {
+    display: block;
+}
+
 /* slogan */
 .slogan {
     background: skyblue;
