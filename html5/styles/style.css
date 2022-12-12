@@ -231,7 +231,6 @@ body {
     width: 250px;
 }
 .group2 {
-    background-color: salmon;
     width: 380px;
 }
 .group3 {
@@ -362,14 +361,52 @@ body {
 .term-list-thumbnail {
     float: left;
 }
-
-
 .cross .term-list-thumbnail {
     float: right;
 }
 .cross .term-list-subject,
 .cross .term-list-brief {
     float: left;
+}
+
+/* search */
+.search-form {
+    padding: 15px 25px 10px;
+    background: linear-gradient(to bottom, #ccc 0%, #eee 100%);
+    border: 1px solid gray;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+}
+.search-form-inner {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.form-group {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.form-group-label {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.form-group-input {
+    flex-grow: 1;
+    min-width: 0;
+    width: 100%;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-button {
+    flex-shrink: 0;
+    padding: 0 10px;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
 }
 
 /* slogan */
