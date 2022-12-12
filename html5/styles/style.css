@@ -411,15 +411,61 @@ body {
 
 /* tab */
 .board {
-    background-color: yellow;
+    position: relative;
     margin-top: 20px;
+}
+.tablist {
+    font-size: 0;
+}
+.tab {
+    padding: 8px 15px;
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: gray;
+    font-size: 1.5rem;
+}
+.tab.is-select {
+    background-color: #fff;
+    border: 1px solid #e85e2c;
+    border-bottom: 0;
+    color: #e85e2c;
 }
 .tabpanel {
     display: none;
+    margin-top: 15px;
 }
 .is-select.tabpanel {
     display: block;
 }
+.board-list li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    line-height: 2;
+}
+.board-list a {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.board-list time {
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+.board-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+.icon-plus::before {
+    color: green;
+    font-weight: bold;
+}
+
 
 /* slogan */
 .slogan {
