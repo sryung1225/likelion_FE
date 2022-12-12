@@ -388,8 +388,8 @@ body {
     align-items: center;
 }
 .form-group-label {
-    flex-shrink: 0;
     margin-right: 10px;
+    white-space: nowrap;
 }
 .form-group-input {
     flex-grow: 1;
@@ -401,12 +401,12 @@ body {
     border-radius: 5px;
 }
 .search-button {
-    flex-shrink: 0;
     padding: 0 10px;
     background-color: #000;
     border: none;
     border-radius: 5px;
     color: #fff;
+    white-space: nowrap;
 }
 
 /* slogan */
