@@ -336,40 +336,41 @@ body {
     background: linear-gradient(to bottom, #ccc 0%, #eee 100%);
     border: 1px solid gray;
     border-radius: 5px;
+    line-height: 1.5em;
 }
 .term-title {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 .term-list div {
     display: flow-root;
     margin-top: 15px;
 }
 .term-list-subject {
-    width: calc(100% - 75px);
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     color: #296897;
     font-weight: bold;
-}
-.term-list-brief {
-    width: calc(100% - 75px);
-    line-height: 1.5em;
 }
 .term-list-thumbnail img {
     vertical-align: top;
 }
-.odd .term-list-subject,
-.even .term-list-thumbnail,
-.odd .term-list-brief {
+.term-list-subject,
+.term-list-brief {
     float: right;
+    width: calc(100% - 75px);
 }
-.even .term-list-subject,
-.odd .term-list-thumbnail,
-.even .term-list-brief {
+.term-list-thumbnail {
     float: left;
 }
 
+
+.cross .term-list-thumbnail {
+    float: right;
+}
+.cross .term-list-subject,
+.cross .term-list-brief {
+    float: left;
+}
 
 /* slogan */
 .slogan {
