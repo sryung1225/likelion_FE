@@ -329,6 +329,48 @@ body {
     color: orangered;
 }
 
+/* Term */
+.term {
+    margin-top: 25px;
+    padding: 10px 15px;
+    background: linear-gradient(to bottom, #ccc 0%, #eee 100%);
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.term-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.term-list div {
+    display: flow-root;
+    margin-top: 15px;
+}
+.term-list-subject {
+    width: calc(100% - 75px);
+    padding-bottom: 10px;
+    color: #296897;
+    font-weight: bold;
+}
+.term-list-brief {
+    width: calc(100% - 75px);
+    line-height: 1.5em;
+}
+.term-list-thumbnail img {
+    vertical-align: top;
+}
+.odd .term-list-subject,
+.even .term-list-thumbnail,
+.odd .term-list-brief {
+    float: right;
+}
+.even .term-list-subject,
+.odd .term-list-thumbnail,
+.even .term-list-brief {
+    float: left;
+}
+
+
 /* slogan */
 .slogan {
     background: skyblue;
