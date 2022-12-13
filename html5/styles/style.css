@@ -488,23 +488,24 @@ body {
 }
 .news-item {
     position: relative;
-    padding-left: 130px;
+    display: flow-root;
 }
 .news-item-title {
+    float: right;
+    width: 250px;
     font-weight: bold;
 }
 .news-item-date {
     display: block;
+    float: right;
+    width: 250px;
     padding-top: 10px;
 }
 .news-item-brief {
+    float: right;
+    width: 250px;
     padding-top: 10px;
     line-height: 1.5;
-}
-.news-item-thumbnail {
-    position: absolute;
-    top: 2px;
-    left: 0;
 }
 .news-item-thumbnail img {
     box-shadow: 0px 10px 10px 5px #eee;
