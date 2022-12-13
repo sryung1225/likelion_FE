@@ -240,7 +240,7 @@ body {
 
 /* login */
 .login {
-    background: orange radial-gradient(at right top, #ef9126, #e85e2c);
+    background: #ef9126 radial-gradient(at right top, #ef9126, #e85e2c);
     padding: 10px;
     border-radius: 5px;
     box-shadow: 5px 5px #a6a6a6;
@@ -325,7 +325,7 @@ body {
     border-radius: 19px;
 }
 .valid-list a:hover {
-    color: orangered;
+    color: #e85e2c;
 }
 
 /* Term */
@@ -333,7 +333,7 @@ body {
     margin-top: 25px;
     padding: 10px 15px;
     background: linear-gradient(to bottom, #ccc 0%, #eee 100%);
-    border: 1px solid gray;
+    border: 1px solid #a6a6a6;
     border-radius: 5px;
     line-height: 1.5em;
 }
@@ -373,7 +373,7 @@ body {
 .search-form {
     padding: 15px 25px 10px;
     background: linear-gradient(to bottom, #ccc 0%, #eee 100%);
-    border: 1px solid gray;
+    border: 1px solid #a6a6a6;
     border-bottom: 0;
     border-radius: 15px 15px 0 0;
 }
@@ -422,7 +422,7 @@ body {
     background-color: #ccc;
     border: 1px solid #aaa;
     border-radius: 5px 5px 0 0;
-    color: gray;
+    color: #a6a6a6;
     font-size: 1.4rem;
 }
 .tab.is-select {
