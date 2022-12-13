@@ -88,144 +88,170 @@
             </div>
         </div>
         <main class="main">
-            <div class="box">
-                <div class="group group1">
-                    <section class="login">
-                        <h2 class="login-title">로그인</h2>
-                        <form class="login-form" action="https://formspree.io/f/meqprzbq" method="POST">
-                            <fieldset>
-                                <legend>회원 로그인 폼</legend>
-                                <div class="user-email">
-                                    <label for="userEmail">아이디</label>
-                                    <input type="email" id="userEmail" name="userEmail" placeholder="fe@euid.dev" required>
-                                </div>
-                                <div class="user-pw">
-                                    <label for="userPw">비밀번호</label>
-                                    <input type="password" id="userPw" name="userPw" placeholder="8자리 이상" required>
-                                </div>
-                                <button type="submit" class="login-button">로그인</button>
-                            </fieldset> 
-                        </form>
-                        <ul class="login-sign">
-                            <li class="signup"><a href="#">회원가입</a></li>
-                            <li class="signin"><a href="#">아이디/비밀번호 찾기</a></li>
-                        </ul>
-                    </section>
-                    <h2 class="a11y-hidden">유효성 검사 배너</h2>
-                    <ul class="valid-list">
-                        <li><a href="#" target="_blank" rel="noreferrer noopener" title="마크업 유효성검사 사이트로 이동(새창)">W3C Markup Validation</a></li>
-                        <li><a href="#" target="_blank" rel="noreferrer noopener" title="CSS 유효성검사 사이트로 이동(새창)">CSS Validation Service</a></li>
-                    </ul>
-                    <section class="term">
-                        <h2 class="term-title">웹 관련 용어</h2>
-                        <dl class="term-list">
-                            <div>
-                                <dt class="term-list-subject">웹 표준 이란?</dt>
-                                <dd class="term-list-thumbnail">
-                                    <img src="./assets/web_standards.gif" alt="W3C 로고">
-                                </dd>
-                                <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
-                            </div>
-                            <div class="cross">
-                                <dt class="term-list-subject">웹 표준 이란?</dt>
-                                <dd class="term-list-thumbnail">
-                                    <img src="./assets/web_standards.gif" alt="W3C 로고">
-                                </dd>
-                                <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
-                            </div>
-                        </dl>
-                    </section>
-                </div>
-                <div class="group group2">
-                    <h2 class="a11y-hidden">검색</h2>
-                    <form class="search-form" action="https://formspree.io/f/meqprzbq" method="POST">
+            <div class="group group1">
+                <section class="login">
+                    <h2 class="login-title">로그인</h2>
+                    <form class="login-form" action="https://formspree.io/f/meqprzbq" method="POST">
                         <fieldset>
-                            <legend>검색 폼</legend>
-                            <div class="search-form-inner">
-                                <div class="form-group">
-                                    <label class="form-group-label" for="search"><span class="icon-search" aria-hidden="true"></span>자료검색</label>
-                                    <input class="form-group-input" type="search" id="search" name="search" placeholder="검색어를 입력하세요. 예)HTML" required>
-                                </div>
-                                <button type="submit" class="search-button">검색</button>
+                            <legend>회원 로그인 폼</legend>
+                            <div class="user-email">
+                                <label for="userEmail">아이디</label>
+                                <input type="email" id="userEmail" name="userEmail" placeholder="fe@euid.dev" required>
                             </div>
+                            <div class="user-pw">
+                                <label for="userPw">비밀번호</label>
+                                <input type="password" id="userPw" name="userPw" placeholder="8자리 이상" required>
+                            </div>
+                            <button type="submit" class="login-button">로그인</button>
                         </fieldset> 
                     </form>
-                    <div class="board">
-                        <div class="tablist" role="tablist">
-                            <button type="button" class="tab is-select" id="noticeButton" aria-controls="notice" aria-selected="true">공지사항</button>
-                            <button type="button" class="tab" id="archiveButton" aria-controls="archive" aria-selected="false">자료실</button>
+                    <ul class="login-sign">
+                        <li class="signup"><a href="#">회원가입</a></li>
+                        <li class="signin"><a href="#">아이디/비밀번호 찾기</a></li>
+                    </ul>
+                </section>
+                <h2 class="a11y-hidden">유효성 검사 배너</h2>
+                <ul class="valid-list">
+                    <li><a href="#" target="_blank" rel="noreferrer noopener" title="마크업 유효성검사 사이트로 이동(새창)">W3C Markup Validation</a></li>
+                    <li><a href="#" target="_blank" rel="noreferrer noopener" title="CSS 유효성검사 사이트로 이동(새창)">CSS Validation Service</a></li>
+                </ul>
+                <section class="term">
+                    <h2 class="term-title">웹 관련 용어</h2>
+                    <dl class="term-list">
+                        <div>
+                            <dt class="term-list-subject">웹 표준 이란?</dt>
+                            <dd class="term-list-thumbnail">
+                                <img src="./assets/web_standards.gif" alt="W3C 로고">
+                            </dd>
+                            <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
                         </div>
-                        <section id="notice" class="notice tabpanel is-select" role="tabpanel" aria-labelledby="noticeButton">
-                            <h2 class="a11y-hidden">공지사항</h2>
-                            <ul class="board-list">
-                                <li>
-                                    <a class="icon-stop" href="/">HTML의 모든 것을 알려주마 샘플 활용법</a>
-                                    <time datetime="2022-12-12T13:53:45">2022.12.12</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">W3C 사이트 리뉴얼 및 공지사항</a>
-                                    <time datetime="2022-12-12T13:53:45">2022.12.12</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">KWCAG 2.1 소식</a>
-                                    <time datetime="2022-12-12T13:53:45">2022.12.12</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">서버 점검으로 인한 사이트 이용안내 입니다.</a>
-                                    <time datetime="2022-12-12T13:53:45">2022.12.12</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">여러분들이 생각하는 웹 접근성에 대해 이야기를 해보아요.</a>
-                                    <time datetime="2022-12-12T13:53:45">2022.12.12</time>
-                                </li>
-                            </ul>
-                            <a href="/" class="board-more icon-plus" aria-labelledby="noticeButton">더보기</a>
-                        </section>
-                        <section id="archive" class="archive tabpanel" role="tabpanel" aria-labelledby="archiveButton">
-                            <h2 class="a11y-hidden">자료실</h2>
-                            <ul class="board-list">
-                                <li>
-                                    <a class="icon-stop" href="/">디자인 사이트 링크 모음</a>
-                                    <time datetime="2022-12-21T13:53:45">2022.12.21</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">웹 접근성 관련 자료 모음</a>
-                                    <time datetime="2022-12-21T13:53:45">2022.12.21</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">예제 샘플 응용해보기</a>
-                                    <time datetime="2022-12-21T13:53:45">2022.12.21</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
-                                    <time datetime="2022-12-21T13:53:45">2022.12.21</time>
-                                </li>
-                                <li>
-                                    <a class="icon-stop" href="/">로얄티 프리 이미지 자료</a>
-                                    <time datetime="2022-12-21T13:53:45">2022.12.21</time>
-                                </li>
-                            </ul>
-                            <a href="/" class="board-more icon-plus" aria-labelledby="archiveButton">더보기</a>
-                        </section>
+                        <div class="cross">
+                            <dt class="term-list-subject">웹 표준 이란?</dt>
+                            <dd class="term-list-thumbnail">
+                                <img src="./assets/web_standards.gif" alt="W3C 로고">
+                            </dd>
+                            <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
+                        </div>
+                    </dl>
+                </section>
+            </div>
+            <div class="group group2">
+                <h2 class="a11y-hidden">검색</h2>
+                <form class="search-form" action="https://formspree.io/f/meqprzbq" method="POST">
+                    <fieldset>
+                        <legend>검색 폼</legend>
+                        <div class="search-form-inner">
+                            <div class="form-group">
+                                <label class="form-group-label" for="search"><span class="icon-search" aria-hidden="true"></span>자료검색</label>
+                                <input class="form-group-input" type="search" id="search" name="search" placeholder="검색어를 입력하세요. 예)HTML" required>
+                            </div>
+                            <button type="submit" class="search-button">검색</button>
+                        </div>
+                    </fieldset> 
+                </form>
+                <div class="board">
+                    <div class="tablist" role="tablist">
+                        <button type="button" class="tab is-select" id="noticeButton" aria-controls="notice" aria-selected="true">공지사항</button>
+                        <button type="button" class="tab" id="archiveButton" aria-controls="archive" aria-selected="false">자료실</button>
                     </div>
-                    <section class="news">
-                        <h2 class="news-title">새소식</h2>
-                        <a href="/" class="news-link">
-                            <article class="news-item">
-                                <h3 class="news-item-title">W3C 사이트가 리뉴얼 되었습니다.</h3>
-                                <time class="news-item-date">2022.07.18</time>
-                                <p class="news-item-brief">디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를 위한 기술 가이드도 찾기 쉽도록 구성되어 있습니다.</p>
-                                <figure class="news-item-thumbnail">
-                                    <img src="assets/news.gif" alt="W3C 사이트가 HTML5 발표 후 새롭게 리뉴얼 된 모습">
-                                    <figcaption>W3C 리뉴얼</figcaption>
-                                </figure>
-                            </article>
-                        </a>
-                        <a href="/" class="news-more icon-plus" title="새소식">더보기</a>
+                    <section id="notice" class="notice tabpanel is-select" role="tabpanel" aria-labelledby="noticeButton">
+                        <h2 class="a11y-hidden">공지사항</h2>
+                        <ul class="board-list">
+                            <li>
+                                <a class="icon-stop" href="/">HTML의 모든 것을 알려주마 샘플 활용법</a>
+                                <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">W3C 사이트 리뉴얼 및 공지사항</a>
+                                <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">KWCAG 2.1 소식</a>
+                                <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                                <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">여러분들이 생각하는 웹 접근성에 대해 이야기를 해보아요.</a>
+                                <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+                            </li>
+                        </ul>
+                        <a href="/" class="board-more icon-plus" aria-labelledby="noticeButton">더보기</a>
+                    </section>
+                    <section id="archive" class="archive tabpanel" role="tabpanel" aria-labelledby="archiveButton">
+                        <h2 class="a11y-hidden">자료실</h2>
+                        <ul class="board-list">
+                            <li>
+                                <a class="icon-stop" href="/">디자인 사이트 링크 모음</a>
+                                <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">웹 접근성 관련 자료 모음</a>
+                                <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">예제 샘플 응용해보기</a>
+                                <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+                                <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+                            </li>
+                            <li>
+                                <a class="icon-stop" href="/">로얄티 프리 이미지 자료</a>
+                                <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+                            </li>
+                        </ul>
+                        <a href="/" class="board-more icon-plus" aria-labelledby="archiveButton">더보기</a>
+                    </section>
+                </div>
+                <section class="news">
+                    <h2 class="news-title accent-color">새소식</h2>
+                    <a href="/" class="news-link">
+                        <article class="news-item">
+                            <h3 class="news-item-title">W3C 사이트가 리뉴얼 되었습니다.</h3>
+                            <time class="news-item-date">2022.07.18</time>
+                            <p class="news-item-brief">디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를 위한 기술 가이드도 찾기 쉽도록 구성되어 있습니다.</p>
+                            <figure class="news-item-thumbnail">
+                                <img src="assets/news.gif" alt="W3C 사이트가 HTML5 발표 후 새롭게 리뉴얼 된 모습">
+                                <figcaption>W3C 리뉴얼</figcaption>
+                            </figure>
+                        </article>
+                    </a>
+                    <a href="/" class="news-more icon-plus" title="새소식">더보기</a>
+                </section>
+            </div>
+            <div class="group group3">
+                <div class="gradient-effect">
+                    <section class="event">
+                        <h2 class="event-title text-xl">신규 <span class="accent-color">이벤트</span></h2>
+                        <div class="event-button-wrap">
+                            <button type="button" class="event-button event-button-prev">이전 이벤트 보기</button>
+                            <button type="button" class="event-button event-button-next">다음 이벤트 보기</button>
+                        </div>
+                        <div class="eventDetail">
+                            <p class="event-thumbnail">
+                                <img src="./assets/free_gift.gif" alt="이벤트 경품 : 웹표준 핵심 가이드북 2(HTML5+CSS3) 증정" />
+                            </p>
+                            <p class="event-brief">
+                                <em>웹표준 핵심 가이드북 2 출시!</em> 선착순 500명 한정으로 증정.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="related">
+                        <h2 class="related-title text-xl">관련 <span class="accent-color">사이트</span></h2>
+                        <ul class="related-list" tabindex="0">
+                            <li><a href="/">멋쟁이 사자처럼</a></li>
+                            <li><a href="/">이듬(E.UID)</a></li>
+                            <li><a href="/">웹 접근성 연구소</a></li>
+                            <li><a href="/">프론트엔드 사기꾼</a></li>
+                            <li><a href="/">코드 라이언</a></li>
+                        </ul>
                     </section>
                 </div>
             </div>
-            <div class="group group3">그룹3</div>
         </main>
         <article class="slogan">슬로건</article>
         <footer class="footer">

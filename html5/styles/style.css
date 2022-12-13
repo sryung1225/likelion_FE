@@ -1,6 +1,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 @import url(./fontello.css);
+@import url(./module.css);
 
 .a11y-hidden, legend {
 	position: absolute;
@@ -234,7 +235,6 @@ body {
     width: 380px;
 }
 .group3 {
-    background-color: gold;
     width: 190px;
 }
 
@@ -472,7 +472,6 @@ body {
     margin-top: 20px;
 }
 .news-title {
-    color: #e85e2c;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -519,6 +518,71 @@ body {
     top: -8px;
     right: -8px;
     padding: 8px;
+}
+
+/* event & related */
+.event {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaa;
+}
+.event-button-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 5px;
+    height: 20px;
+}
+.event-button {
+    width: 19px;
+    height: 18px;
+    text-indent: 19px;
+    border: 0;
+    background: url("./images/back_forward.png") no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.event-button-prev {
+    background-position: 0 0;
+}
+.event-button-next {
+    background-position: -36px 0;
+}
+.event-button:focus {
+    outline-offset: -2px;
+}
+.event-thumbnail,
+.event-brief {
+    margin: 10px 0;
+}
+.event-thumbnail img {
+    box-shadow: 5px 5px #aaa;
+}
+.event-brief {
+    line-height: 1.5;
+}
+.related {
+    margin-top: 10px;
+}
+.related-list {
+    height: 27px; /* lh25*1 + b2 = 27 */
+    margin-top: 10px;
+    padding: 0 10px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: height 500ms, padding 500ms 500ms;
+}
+.related-list:hover,
+.related-list:focus {
+    height: 147px; /* lh25*5 + p20 + b2 = 147 */
+    padding: 10px;
+}
+.related-list a {
+    display: block;
+    line-height: 25px;
 }
 
 /* slogan */
