@@ -423,7 +423,7 @@ body {
     border: 1px solid #aaa;
     border-radius: 5px 5px 0 0;
     color: gray;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .tab.is-select {
     background-color: #fff;
@@ -443,7 +443,7 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     margin-top: 10px;
-    line-height: 2;
+    line-height: 1.5;
 }
 .board-list a {
     flex-grow: 1;
@@ -465,7 +465,6 @@ body {
     color: green;
     font-weight: bold;
 }
-
 
 /* slogan */
 .slogan {
