@@ -466,6 +466,60 @@ body {
     font-weight: bold;
 }
 
+/* news */
+.news {
+    position: relative;
+    margin-top: 20px;
+}
+.news-title {
+    color: #e85e2c;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.news-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 15px 0;
+    background: #aaa linear-gradient(to right, #ccc, #fff);
+}
+.news-link {
+    display: block;
+}
+.news-item {
+    position: relative;
+    padding-left: 130px;
+}
+.news-item-title {
+    font-weight: bold;
+}
+.news-item-date {
+    display: block;
+    padding-top: 10px;
+}
+.news-item-brief {
+    padding-top: 10px;
+    line-height: 1.5;
+}
+.news-item-thumbnail {
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+.news-item-thumbnail img {
+    box-shadow: 0px 10px 10px 5px #eee;
+}
+.news-item-thumbnail figcaption {
+    padding-top: 15px;
+    text-align: center;
+}
+.news-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
 /* slogan */
 .slogan {
     background: skyblue;
