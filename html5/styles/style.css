@@ -593,9 +593,11 @@ body {
     list-style: none;
 }
 .ranking {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     margin-top: 10px;
     counter-increment: number;
-    position: relative;
 }
 .ranking::before {
     content: counter(number);
@@ -610,13 +612,10 @@ body {
     text-align: center;
 }
 .ranking em {
-    position: absolute;
-    top: 50%;
-    right: 0;
+    margin-left: auto;
     width: 11px;
     height: 11px;
-    margin-top: -6px;
-    background: pink url("./images/rank.png") no-repeat;
+    background: url("./images/rank.png") no-repeat;
     background-position-x: 100%;
 }
 .ranking .up {
