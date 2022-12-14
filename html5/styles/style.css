@@ -675,6 +675,38 @@ body {
     background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 .footer-inner {
-    background: silver;
-    height: 15vh;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+.footer-logo {
+    width: 150px;
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-inner-wrapper {
+    flex-grow: 1;
+}
+.guide-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 4px 30px;
+    background: #888;
+    border-radius: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.guide-list a {
+    display: block;
+    padding: 6px 10px;
+}
+.address,
+.copyright {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 20px;
 }
