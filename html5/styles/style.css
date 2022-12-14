@@ -595,7 +595,7 @@ body {
 .ranking {
     margin-top: 10px;
     counter-increment: number;
-    vertical-align: middle;
+    position: relative;
 }
 .ranking::before {
     content: counter(number);
@@ -610,9 +610,12 @@ body {
     text-align: center;
 }
 .ranking em {
-    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
     width: 11px;
     height: 11px;
+    margin-top: -6px;
     background: pink url("./images/rank.png") no-repeat;
     background-position-x: 100%;
 }
