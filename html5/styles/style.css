@@ -585,6 +585,54 @@ body {
     line-height: 25px;
 }
 
+/* favorite */
+.favorite {
+    position: relative;
+}
+.favorite-list {
+    list-style: none;
+}
+.ranking {
+    margin-top: 10px;
+    counter-increment: number;
+    vertical-align: middle;
+}
+.ranking::before {
+    content: counter(number);
+    display: inline-block;
+    width: 1.5em;
+    margin-right: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.ranking em {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: pink url("./images/rank.png") no-repeat;
+    background-position-x: 100%;
+}
+.ranking .up {
+    background-position-y: 0;
+}
+.ranking .stop {
+    background-position-y: 47%;
+}
+.ranking .down {
+    background-position-y: 100%;
+}
+.favorite-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+
 /* slogan */
 .slogan {
     background: skyblue;
