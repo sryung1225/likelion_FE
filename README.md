@@ -7,8 +7,6 @@
 - 22/11/28/MON
 - [https://www.codelion.net/class/TGl2ZUNvZGluZ1N0ZXBOb2RlOjN6bWU=](https://www.codelion.net/class/TGl2ZUNvZGluZ1N0ZXBOb2RlOjN6bWU=)
 - directory : [/tech!t__html_css/](tech!t__html_css/)
-  - result : [결과](tech!t__html_css/index.html)
-  - quiz : [퀴즈](tech!t__html_css/quiz.md)
 
 ---
 
@@ -17,6 +15,12 @@
 - 22/11/29/TUE
 - directory : [/git/](git/)
 
-### HTML/CSS
-- 22/11/30/WED - ing
+### 🎃 HTML/CSS : 고정형
+- 22/11/30/WED - 22/12/14/WED
 - directory : [/html5/](html5/)
+- view : [index.html](https://sryung1225.github.io/likelion_FE/html5/)
+
+### 🎃 HTML/CSS : 반응형
+- 22/12/15/Thu - 22/12/14/WED
+- directory : [/RWD/](rwd/)
+- view : [index.html](https://sryung1225.github.io/likelion_FE/RWD/)
