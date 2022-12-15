@@ -4,68 +4,67 @@
 @import url(./theme.css);
 @import url(./base.css);
 
-/* ---------- 모든 디바이스 (All Device) ---------- */
-/* 공통 헤더 */
-.appHeader {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: var(--spacing-base);
-  padding: var(--spacing-base) var(--spacing-lg);
-}
-
-/* 공통 로고*/
-.logo {
-  width: 12.75rem; /* 204px */
-  height: 3.687rem; /* 59px */
-}
-.logo__link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url(./../images/webcafe-logo.png) no-repeat 0 0/100%;
-  /* background-size: 100% 100%; */
-}
-/* 공통 멤버서비스 */
-.memberOnly {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-}
-/* 공통 검색 폼 */
+/* reset */
 input[type="search"] {
   -webkit-appearance: none;
   appearance: none;
 }
-.searchForm__group {
+
+/* ---------- 모든 디바이스 (All Device) ---------- */
+.app-header {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  gap: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+.logo-link {
+  display: inline-block;
+  width: 202px;
+  height: 58px;
+  background: url("./../images/webcafe-logo.png") no-repeat 0 0/100%;
+}
+.member-only {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+.member-only li:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 7px;
+  background-color: var(--black);
+}
+.search-form-group {
   display: flex;
   flex-flow: row nowrap;
 }
-.searchForm__group .formInput {
+.search-input-group {
   margin-right: var(--spacing-xs);
 }
-.searchForm__group .formInput__input {
-  width: 100%;
+.search-input {
   height: 2rem;
-  border: 1px solid var(--silver);
-  background: var(--white);
-  border-radius: 0.25rem;
   padding: var(--spacing-sxxs) var(--spacing-sm);
+  background: var(--white);
+  border: 1px solid var(--silver);
+  border-radius: 4px;
 }
-.button {
-  cursor: pointer;
+.btn {
   height: 2rem;
-  border-radius: 0.25rem;
-  padding: 0.125rem 0.75rem;
+  padding: var(--spacing-sxxs) var(--spacing-sm);
+  border-radius: var(--spacing-xxs);
   white-space: nowrap;
   font-size: var(--text-sm);
+  cursor: pointer;
 }
-.button--none {
+.btn--none {
   border: 0;
   padding: 0;
   background: transparent;
 }
-.button--fill {
+.btn--fill {
   background: var(--secondary-color);
   color: var(--white);
   border: 0;
@@ -76,44 +75,43 @@ input[type="search"] {
   border: 1px solid currentColor;
 }
 
+
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
-  /* 데스크탑 헤더 */
-  .appHeader {
+  .app-header {
     max-width: var(--container-width);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    background-color: var(--white);
   }
-  /* 데스크탑 로고 */
   .logo {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
-  /* 데스크탑 검색 폼 */
-  .searchForm__group {
+  .search-form-group {
     justify-content: flex-end;
   }
-  .searchForm__group .formInput {
+  .search-input {
     width: 25rem;
   }
 }
 
 /* ---------- 모바일 디바이스 (Mobile Device) ---------- */
 @media (min-width: 320px) and (max-width: 768px) {
-  /* 모바일 헤더 */
-  .appHeader {
-    background: var(--primary-color);
+  .app-header {
+    background-color: var(--primary-color);
     color: var(--white);
   }
-  /* 모바일 멤버서비스 */
-  .memberOnly {
+  .member-only {
     order: -1;
     font-size: var(--text-sm);
   }
-  /* 모바일 검색 폼 */
-  .searchForm__group .formInput {
+  .member-only li:not(:first-child)::before {
+    background-color: var(--white);
+  }
+  .search-input-group {
     flex-grow: 1;
+  }
+  .search-input {
+    width: 100%;
   }
 }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .container{
+      border: 1px solid black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      width: 600px;
+    }
+
+    .container > div{
+      flex-basis: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box" style="background-color: yellow; flex-grow: 1">글자가 길어진다</div>
+    <div class="box" style="background-color: red;">ㅁㅁ</div>
+    <div class="box" style="background-color: orange;">ㅁㅁㅁㅁㅁ</div>
+  </div>
+
+</body>
+</html>
