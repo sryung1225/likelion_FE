@@ -4,17 +4,115 @@
 @import url(./theme.css);
 @import url(./base.css);
 
+/* reset */
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 /* ---------- 모든 디바이스 (All Device) ---------- */
+.app-header {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  gap: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+.logo-link {
+  display: inline-block;
+  width: 202px;
+  height: 58px;
+  background: url("./../images/webcafe-logo.png") no-repeat 0 0/100%;
+}
+.member-only {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+.member-only li:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 7px;
+  background-color: var(--black);
+}
+.search-form-group {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.search-input-group {
+  margin-right: var(--spacing-xs);
+}
+.search-input {
+  height: 2rem;
+  padding: var(--spacing-sxxs) var(--spacing-sm);
+  background: var(--white);
+  border: 1px solid var(--silver);
+  border-radius: 4px;
+}
+.btn {
+  height: 2rem;
+  padding: var(--spacing-sxxs) var(--spacing-sm);
+  border-radius: var(--spacing-xxs);
+  white-space: nowrap;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.btn--none {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+.btn--fill {
+  background: var(--secondary-color);
+  color: var(--white);
+  border: 0;
+}
+.button--outline {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+}
 
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
-
+  .app-header {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    background-color: var(--white);
+  }
+  .logo {
+    position: absolute;
+  }
+  .search-form-group {
+    justify-content: flex-end;
+  }
+  .search-input {
+    width: 25rem;
+  }
 }
 
 /* ---------- 모바일 디바이스 (Mobile Device) ---------- */
 @media (min-width: 320px) and (max-width: 768px) {
-
+  .app-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  .member-only {
+    order: -1;
+    font-size: var(--text-sm);
+  }
+  .member-only li:not(:first-child)::before {
+    background-color: var(--white);
+  }
+  .search-input-group {
+    flex-grow: 1;
+  }
+  .search-input {
+    width: 100%;
+  }
 }
 
 /* 고해상도 배경이미지 미디어쿼리 */
