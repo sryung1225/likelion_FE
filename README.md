@@ -15,12 +15,12 @@
 - 22/11/29/TUE
 - directory : [/git/](git/)
 
-### 🎃 HTML/CSS : 고정형
+### 🥖 HTML/CSS _ 고정형
 - 22/11/30/WED - 22/12/14/WED
 - directory : [/html5/](html5/)
 - view : [index.html](https://sryung1225.github.io/likelion_FE/html5/)
 
-### 🎃 HTML/CSS : 반응형
-- 22/12/15/Thu - 22/12/14/WED
+### 🍞 HTML/CSS _ 반응형
+- 22/12/15/THU - 22/12/21/WED
 - directory : [/RWD/](rwd/)
 - view : [index.html](https://sryung1225.github.io/likelion_FE/RWD/)
