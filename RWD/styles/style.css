@@ -74,6 +74,11 @@ input[type="search"] {
   color: var(--secondary-color);
   border: 1px solid currentColor;
 }
+.menu-link {
+  display: block;
+  font-size: var(--text-md);
+  font-weight: 700;
+}
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
@@ -186,6 +191,27 @@ input[type="search"] {
   .is--active .btnburger--bot {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
+  }
+  .menu-list {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    padding: var(--spacing-lg);
+    background: var(--accent-opacity-color);
+    backdrop-filter: blur(4px);
+    transform: translateX(-150%);
+  }
+  .menu-item {
+    border-bottom: 1px solid var(--silver);
+  }
+  .menu-link {
+    padding: var(--spacing-xs);
+  }
+  .menu.is--active .menu-list {
+    transform: none;
   }
 }
 
