@@ -121,18 +121,44 @@ input[type="search"] {
     background-color: gold;
   }
   .btnburger {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: space-around;
-    width: 50px;
-    height: 50px;
+    position: relative;
+    width: 30px;
+    height: 30px;
     background-color: blue;
+    overflow: hidden;
   }
   [class*="btnburger--"] {
+    position: absolute;
+    left: 0;
+    transition: all 200ms;
     width: 100%;
-    height: 10px;
+    height: 20%;
     background-color: var(--white);
     border-radius: 5px;
+  }
+  .btnburger--top {
+    top: 0;
+  }
+  .btnburger--mid {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btnburger--bot {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .is--active .btnburger--top {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .is--active .btnburger--mid {
+    transform: translate(-100%, -50%);
+  }
+  .is--active .btnburger--bot {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
   /* 햄버거 끝 */
 }
