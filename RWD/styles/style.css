@@ -149,7 +149,6 @@ input[type="search"] {
     width: 2rem;
     height: 2rem;
     overflow: hidden;
-    cursor: pointer;
   }
   .button--burger:focus {
     outline-offset: 2px;
@@ -164,6 +163,7 @@ input[type="search"] {
     background-color: var(--white);
     border-radius: 5px;
     transition: all 200ms;
+    pointer-events: none;
   }
   .btnburger--top {
     top: 0;
