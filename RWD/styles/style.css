@@ -75,7 +75,6 @@ input[type="search"] {
   border: 1px solid currentColor;
 }
 
-
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
   .app-header {
@@ -91,6 +90,10 @@ input[type="search"] {
   }
   .search-input {
     width: 25rem;
+  }
+  /* 데스크탑 메인메뉴 제어버튼 */
+  .btnburger {
+    display: none;
   }
 }
 
@@ -113,6 +116,25 @@ input[type="search"] {
   .search-input {
     width: 100%;
   }
+  /* 햄버거 시작 */
+  .btnburger-wrapper {
+    background-color: gold;
+  }
+  .btnburger {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+  }
+  [class*="btnburger--"] {
+    width: 100%;
+    height: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+  /* 햄버거 끝 */
 }
 
 /* 고해상도 배경이미지 미디어쿼리 */
