@@ -5,15 +5,15 @@
     if (event.shiftKey && (event.key === 'Escape' || event.keyCode === 27)) {
       document.body.classList.toggle('gridShow');
     }
-  })
+  });
 
   // 모바일 메뉴열기 버튼 누를 때 is--active 토글 및 aria-label 변경
-  var btn = document.querySelector('.btnburger');
+  var btn = document.querySelector('.button--burger');
   var menu = document.querySelector('.menu');
-  var menuList = menu.querySelector('.menu-list');
+  var menuList = menu.querySelector('.menu__list');
   var menuListLinks = menuList.querySelectorAll('a');
-  var firstItem = menu.querySelector('.menu-list li:first-child a');
-  var lastItem = menu.querySelector('.menu-list li:last-child a');
+  var firstItem = menu.querySelector('.menu__list li:first-child a');
+  var lastItem = menu.querySelector('.menu__list li:last-child a');
   var video = document.querySelector('.news__video');
 
   btn.addEventListener('click', function (e) {
@@ -97,11 +97,9 @@
 
   // 메뉴, 메뉴 열기 버튼이 활성화 된 상태에서 창 크기 조정 시, 활성 클래스 제거
   window.addEventListener('resize', function (e) {
-    setTimeout(() => {
-      if (btn.classList.contains('is--active')) {
-        btn.classList.remove('is--active');
-        menu.classList.remove('is--active');
-      }
-    }, "1000")
+    if (btn.classList.contains('is--active')) {
+      btn.classList.remove('is--active');
+      menu.classList.remove('is--active');
+    }
   });
-});
+})();
