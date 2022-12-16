@@ -126,6 +126,7 @@ input[type="search"] {
     height: 30px;
     background-color: blue;
     overflow: hidden;
+    cursor: pointer;
   }
   [class*="btnburger--"] {
     position: absolute;
