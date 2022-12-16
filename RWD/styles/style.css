@@ -94,6 +94,28 @@ input[type="search"] {
   .btnburger {
     display: none;
   }
+  .menu {
+    display: block;
+    background-color: var(--secondary-color);
+    padding: var(--spacing-base) var(--spacing-lg);
+  }
+  .menu-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--spacing-md);
+  }
+  .menu-link {
+    display: block;
+    padding: var(--spacing-xs);
+    color: var(--white);
+    font-size: var(--text-md);
+    font-weight: 700;
+    text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+  }
 }
 
 /* ---------- 모바일 디바이스 (Mobile Device) ---------- */
