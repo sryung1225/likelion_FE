@@ -85,23 +85,18 @@ input[type="search"] {
   padding: var(--spacing-base) var(--spacing-lg);
 }
 .book {
-  background-color: lightgreen;
   grid-area: book;
 }
 .news {
-  background-color: yellow;
   grid-area: news;
 }
 .board {
-  background-color: lightsalmon;
   grid-area: board;
 }
 .favorite {
-  background-color: lightblue;
   grid-area: favorite;
 }
 .twitter {
-  background-color: burlywood;
   grid-area: twitter;
 }
 [class*="__title"]{
@@ -113,6 +108,21 @@ input[type="search"] {
 [class*="__koTitle"]{
   font-size: var(--text-md);
   font-weight: bold;
+}
+.accentBook {
+  color: var(--accent-book);
+}
+.accentNews {
+  color: var(--accent-news);
+}
+.accentBoard {
+  color: var(--accent-board);
+}
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+.accentTwitter {
+  color: var(--accent-twitter);
 }
 .sprite {
   height: 3.7rem;
