@@ -105,20 +105,14 @@ input[type="search"] {
   grid-area: twitter;
 }
 [class*="__title"]{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.85rem 1.85rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   margin-bottom: var(--spacing-base);
 }
 [class*="__koTitle"]{
-  align-self: end;
   font-size: var(--text-md);
   font-weight: bold;
-}
-[class*="__enTitle"]{
-  align-self: start;
-  font-size: var(--text-base);
-  font-weight: normal;
 }
 .sprite {
   height: 3.7rem;
