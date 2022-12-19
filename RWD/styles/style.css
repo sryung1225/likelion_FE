@@ -104,6 +104,42 @@ input[type="search"] {
   background-color: burlywood;
   grid-area: twitter;
 }
+[class*="__title"]{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.85rem 1.85rem;
+  margin-bottom: var(--spacing-base);
+}
+[class*="__koTitle"]{
+  align-self: end;
+  font-size: var(--text-md);
+  font-weight: bold;
+}
+[class*="__enTitle"]{
+  align-self: start;
+  font-size: var(--text-base);
+  font-weight: normal;
+}
+.sprite {
+  height: 3.7rem;
+  padding-left: 4rem;
+  background: url("./../images/sprite_main.png") no-repeat;
+}
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteBoard {
+  background-position: 0 -115px;
+}
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+.spriteTwitter {
+  background-position: 0 -460px;
+}
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
