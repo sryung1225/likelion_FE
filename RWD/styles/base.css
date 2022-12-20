@@ -34,25 +34,19 @@ video {
 }
 
 /* 반응형 Iframe */
-.iframeWrapper {
-  position: relative;
-  display: block;
+.iframeRatio-21-9 {
+  aspect-ratio: 21/9;
 }
 .iframeRatio-16-9 {
-  padding-top: calc(9 / 16 * 100%);
-}
-.iframeRatio-21-9 {
-  padding-top: calc(9 / 21 * 100%);
+  aspect-ratio: 16/9;
 }
 .iframeRatio-4-3 {
-  padding-top: calc(3 / 4 * 100%);
+  aspect-ratio: 4/3;
+}
+.iframeRatio-1-1 {
+  aspect-ratio: 1/1;
 }
 .iframeWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   width: 100%;
   height: 100%;
 }
