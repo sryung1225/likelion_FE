@@ -1,0 +1,11 @@
+.container {
+	overflow: auto;
+}
+.box {
+	background-color: gold;
+	box-sizing: border-box;
+	width: 200%;
+	height: 200px;
+	margin: 0 50px;
+	padding: 0 50px;
+}
