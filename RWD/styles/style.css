@@ -99,15 +99,19 @@ input[type="search"] {
 .twitter {
   grid-area: twitter;
 }
-[class*="__title"]{
+.appMain [class*="__title"]{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   margin-bottom: var(--spacing-base);
 }
-[class*="__koTitle"]{
+.appMain [class*="__koTitle"]{
   font-size: var(--text-md);
   font-weight: bold;
+}
+.appMain [class*=__summary] {
+  margin-top: var(--spacing-base);
+  line-height: 1.6;
 }
 .accentBook {
   color: var(--accent-book);
@@ -144,6 +148,27 @@ input[type="search"] {
 .spriteTwitter {
   background-position: 0 -460px;
 }
+.book__cover {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.book__coverCaption {
+  margin-top: var(--spacing-sm);
+  line-height: 1.6;
+}
+.book__info {
+  margin-top: var(--spacing-base);
+  text-align: center;
+}
+.book__info * {
+  display: inline;
+}
+.ratingStar {
+  display: block;
+  font-size: var(--text-xl);
+}
+
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
