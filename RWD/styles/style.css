@@ -9,6 +9,10 @@ input[type="search"] {
   -webkit-appearance: none;
   appearance: none;
 }
+/* Font Awesome */
+span[class*="fa-"] {
+  margin-right: var(--spacing-xs);
+}
 
 /* ---------- 모든 디바이스 (All Device) ---------- */
 .app-header {
@@ -167,6 +171,11 @@ input[type="search"] {
 .ratingStar {
   display: block;
   font-size: var(--text-xl);
+}
+.news__date {
+  display: block;
+  margin-top: var(--spacing-base);
+  text-align: right;
 }
 
 
