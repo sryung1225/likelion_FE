@@ -182,6 +182,7 @@ span[class*="fa-"] {
   flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
+  overflow: hidden;
 }
 .board__title {
   order: 1;
