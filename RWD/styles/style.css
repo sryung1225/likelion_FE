@@ -177,8 +177,42 @@ span[class*="fa-"] {
   margin-top: var(--spacing-base);
   text-align: right;
 }
-
-
+.board {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.board__title {
+  order: 1;
+  flex-grow: 1;
+}
+.board__list {
+  order: 3;
+  width: 100%;
+}
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  line-height: 2;
+}
+.board__link {
+  flex-grow: 1;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.board__date {
+  flex-shrink: 0;
+  padding-left: 10px;
+}
+.board__more {
+  order: 2;
+  flex-shrink: 0;
+  padding-top: var(--spacing-sm);
+}
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
   .app-header {
