@@ -214,6 +214,7 @@ span[class*="fa-"] {
   flex-shrink: 0;
   padding-top: var(--spacing-sm);
 }
+
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
   .app-header {
@@ -366,6 +367,11 @@ span[class*="fa-"] {
       "board"
       "favorite"
       "twitter";
+  }
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    color: var(--orange);
+    line-height: 2;
   }
 }
 
