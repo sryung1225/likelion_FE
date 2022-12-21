@@ -214,6 +214,9 @@ span[class*="fa-"] {
   flex-shrink: 0;
   padding-top: var(--spacing-sm);
 }
+.favorite__link {
+  line-height: 2;
+}
 .twitter__userInfo {
   display: inline-flex;
   gap: var(--spacing-xs);
@@ -241,7 +244,7 @@ span[class*="fa-"] {
 }
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .app-header {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -293,8 +296,48 @@ span[class*="fa-"] {
   }
 }
 
+/* ---------- 태블릿 디바이스 (Tablet Device) ---------- */
+@media (min-width: 640px) and (max-width: 768px) {
+  .appMain {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+  .book {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .news {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .board {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .favorite {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .twitter {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .book__cover img {
+    width: 30%;
+  }
+}
+
 /* ---------- 모바일 디바이스 (Mobile Device) ---------- */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 639px) {
+  .appMain {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "book"
+      "news"
+      "board"
+      "favorite"
+      "twitter";
+  }
+}
+
+/* ---------- 모바일 & 태블릿 ---------- */
+@media (min-width: 360px) and (max-width: 768px) {
   .app-header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -382,16 +425,6 @@ span[class*="fa-"] {
   }
   .menu.is--active .menu-list {
     transform: none;
-  }
-  .appMain {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "book"
-      "news"
-      "board"
-      "favorite"
-      "twitter";
   }
   .favorite__link::after {
     content: attr(data-tooltip);
