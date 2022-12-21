@@ -242,6 +242,19 @@ span[class*="fa-"] {
   display: block;
   margin-top: var(--spacing-xs)
 }
+.appFooter {
+  padding: var(--spacing-base) var(--spacing-lg);
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+}
+.address,
+.copyright {
+  margin: var(--spacing-base) 0;
+}
+.copyright {
+  display: block;
+}
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 769px) {
@@ -333,6 +346,12 @@ span[class*="fa-"] {
       "board"
       "favorite"
       "twitter";
+  }
+  .appFooter {
+    text-align: left;
+  }
+  .address > span {
+    display: block;
   }
 }
 
