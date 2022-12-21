@@ -214,6 +214,31 @@ span[class*="fa-"] {
   flex-shrink: 0;
   padding-top: var(--spacing-sm);
 }
+.twitter__userInfo {
+  display: inline-flex;
+  gap: var(--spacing-xs);
+}
+.twitter__userProfile {
+  float: right;
+  width: 25%;
+  min-width: 3.125rem;
+  max-width: 5.625rem;
+  aspect-ratio: 1 / 1;
+  margin-left: var(--spacing-xs);
+  shape-outside: circle(50%);
+}
+.twitter__userProfileImage {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 30% 40%;
+}
+.twitter__date {
+  display: block;
+  margin-top: var(--spacing-xs)
+}
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
 @media (min-width: 768px) {
