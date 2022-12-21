@@ -243,17 +243,13 @@ span[class*="fa-"] {
   margin-top: var(--spacing-xs)
 }
 .appFooter {
-  padding: var(--spacing-base) var(--spacing-lg);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: var(--spacing-base);
+  padding: var(--spacing-xl) var(--spacing-lg);
   background-color: var(--primary-color);
   color: var(--white);
-  text-align: center;
-}
-.address,
-.copyright {
-  margin: var(--spacing-base) 0;
-}
-.copyright {
-  display: block;
 }
 
 /* ---------- 데스크탑 디바이스 (Desktop Device) ---------- */
@@ -348,10 +344,11 @@ span[class*="fa-"] {
       "twitter";
   }
   .appFooter {
-    text-align: left;
+    align-items: flex-start;
   }
-  .address > span {
-    display: block;
+  .address {
+    display: flex;
+    flex-flow: column nowrap;
   }
 }
 
