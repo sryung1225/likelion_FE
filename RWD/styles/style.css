@@ -345,6 +345,7 @@ span[class*="fa-"] {
   }
   .appFooter {
     align-items: flex-start;
+    font-size: var(--text-sm);
   }
   .address {
     display: flex;
