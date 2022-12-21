@@ -1,0 +1,22 @@
+@use './include' as *;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+.container {
+  @include flexboxCenter($wrap: wrap);
+  @include margin(50px, 0);
+}
+.book {
+  &__title {
+    font-size: removeUnit(36px);
+  }
+  &__cover {
+    width: 60%;
+    font-size: rem(24px);
+  }
+  &__info {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,32 @@
+/* function */
+@use "sass:math";
+$rootUnit: 16px !default;
+@function removeUnit($value){
+  // 단위 제거 : 5px*0=5 같이 되는 sass 연산 특징 사용
+  @return math.div($value, $value * 0 + 1);
+}
+@function rem($value, $base: $rootUnit) {
+  @return (removeUnit(math.div($value, $base))) * 1rem;
+}
+
+/* mixins */
+@mixin flexboxCenter($direction: row, $wrap: nowrap){
+  display: flex;
+  flex-flow: $direction $wrap;
+}
+@mixin margin($y: auto, $x: auto){
+  margin: $y $x;
+}
+
+/* media query */
+$break: 768px;
+@mixin mobile {
+  @media (max-width: #{$break - 1}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$break}) {
+    @content;
+  }
+}
