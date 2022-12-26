@@ -22,7 +22,11 @@
       <div class="max-width">
         <h1 class="logo">
           <a href="/" target="_self">
-            <img src="./img/logo.svg" alt="My Blog">
+            <picture>
+              <source media="(max-width: 500px)" srcset="./img/logo_icon.svg">
+              <source media="(min-width: 501px)" srcset="./img/logo.svg">
+              <img src="./img/logo.svg" alt="My Blog">
+            </picture>
           </a>
         </h1>
         <form class="search-form">

@@ -5,6 +5,7 @@ header .max-width {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 1.2rem;
 }
 .logo {
   height: 3.2rem;
@@ -47,7 +48,6 @@ header .max-width {
   height: 4.4rem;
   border-radius: 50%;
   overflow: hidden;
-  margin-left: 1.2rem;
 }
 .profile img {
   width: 100%;
