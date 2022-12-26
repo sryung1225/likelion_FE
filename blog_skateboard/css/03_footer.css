@@ -1,0 +1,35 @@
+footer {
+  position: relative;
+  background-color: #f9f9f9;
+  font-size: 1.6rem;
+}
+.copyright {
+  color: #666;
+  font-size: 16px;
+  line-height: 8rem;
+  text-align: center;
+}
+.btn-top {
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+  width: 6.4rem;
+  height: 6.4rem;
+  box-sizing: border-box;
+  padding-top: 30px;
+  background-color: #37ABEC;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  text-align: center;
+}
+.btn-top::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid #fff;
+  border-width: 3px 3px 0 0 ;
+  transform: rotate(-45deg);
+}
