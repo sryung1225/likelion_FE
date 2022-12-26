@@ -2,11 +2,16 @@
 멋쟁이사자처럼 프론트엔드 스쿨 4기
 
 
-## TECH!T
+## 코드라이언 & 특강
 ### 🎈 일단 만드는 HTML/CSS
 - 22/11/28/MON
 - [https://www.codelion.net/class/TGl2ZUNvZGluZ1N0ZXBOb2RlOjN6bWU=](https://www.codelion.net/class/TGl2ZUNvZGluZ1N0ZXBOb2RlOjN6bWU=)
 - directory : [/tech!t__html_css/](tech!t__html_css/)
+
+### 🛹 HTML/CSS 특강 : Blog_skateboard
+- 22/12/26/MON
+- directory : [/blog_skateboard/](blog_skateboard/)
+- view : [index.html](https://sryung1225.github.io/likelion_FE/blog_skateboard/)
 
 ---
 
@@ -24,3 +29,7 @@
 - 22/12/15/THU - 22/12/21/WED
 - directory : [/RWD/](rwd/)
 - view : [index.html](https://sryung1225.github.io/likelion_FE/RWD/)
+
+### 🥨 Dart-Sass
+- 22/12/21/WED
+- directory : [/SASS/](SASS/)
