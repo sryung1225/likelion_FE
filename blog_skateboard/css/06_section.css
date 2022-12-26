@@ -1,27 +1,106 @@
+.grid-section {
+  padding: 10vw 0;
+}
 .grid-section .max-width {
   display: grid;
+  gap: 2.4rem;
+}
+.latest .max-width {
   grid-template:
     "title post" auto
     "more post" 1fr / 1fr 3fr;
-}
-.grid-section .title {
-  grid-area: title;
-  background: #ddd;
-}
-.grid-section .post-list {
-  grid-area: post;
-  background: #aaa;
-}
-.grid-section .more {
-  grid-area: more;
-  background: #888;
-}
-
-.latest {
-  background-color: bar(--c-light-gray);
 }
 .video .max-width {
   grid-template:
     "post title" auto
     "post more" 1fr / 3fr 1fr;
+}
+.grid-section .title {
+  grid-area: title;
+}
+.grid-section .title h3 {
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.grid-section .title p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  word-break: break-all;
+  color: var(--c-text-light);
+  font-weight: 1.4rem;
+}
+.grid-section .post-list {
+  grid-area: post;
+}
+.grid-section .more {
+  grid-area: more;
+  align-self: start;
+  justify-self: start;
+}
+.latest {
+  background-color: var(--c-light-gray);
+  padding: 19rem 0 10rem;
+}
+.more {
+  padding: .2em .8em;
+  background-color: rgba(var(--rgb-dark), .8);
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-size: .85em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .grid-section .max-width {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-section .more {
+    margin: auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .lastest .max-width > .title {
+    padding-right: 4.8rem;
+  }
+  .video .max-width > .title {
+    padding-left: 4.8rem;
+  }
+  .video .max-width > .more {
+    margin-left: 4.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-section .max-width {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .lastest {
+    padding: 12rem 0 5rem;
+  }
+  .video {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-section .more {
+    position: absolute;
+    top: 0.5em;
+    right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .grid-section .more {
+    margin: auto;
+    padding: 0.6em 2em;
+  }
 }
