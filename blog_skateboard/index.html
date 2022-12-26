@@ -3,15 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="stylesheet" href="./css/00_reset.css">
   <link rel="stylesheet" href="./css/00_common.css">
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/01_layout.css">
+  <link rel="stylesheet" href="./css/02_header.css">
+  <link rel="stylesheet" href="./css/04_visual.css">
+  <title>Blog : Skateboard</title>
 </head>
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <div class="wrap">
+    <header>
+      <div class="max-width">
+        <h1 class="logo">
+          <a href="/" target="_self">
+            <img src="./img/logo.svg" alt="My Blog">
+          </a>
+        </h1>
+        <form class="search-form">
+          <label for="searchForm" class="sr-only">검색</label>
+          <input type="search" id="searchForm" placeholder="SEARCH">
+          <button type="submit">
+            <img src="./img/icon-search.svg" alt="검색하기">
+          </button>
+        </form>
+        <button class="profile" type="button">
+          <span class="sr-only">프로필 확인하기></span>
+          <img src="./img/profile.jpg" alt="프로필 이미지">
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="visual">
+        <h2>Skateboard</h2>
+        <img src="./img/main-visual.jpg" alt="">
+      </div>
+      <div class="max-width">
+        <section>
+          <div>
+            <h2>Latest Posts</h2>
+            <p>돋고, 청춘의 봄날의 끓는 것이다. 피부가 위하여서 무한한 얼음 싹이 아니다. 두기 안고, 우리 인생에 뛰노는 별과 옷을 많이 하는 있으랴? 공자는 보는 열락의 피어나기 너의 이상의 위하여,
+              속에서 칼이다. 군영과 열락의 봄날의 밥을 피부가 말이다.</p>
+          </div>
+          <ul>
+            <li>
+              <article>
+                <a href="/">
+                  <img src="" alt="">
+                  <h3></h3>
+                  <time></time>
+                  <p></p>
+                </a>
+              </article>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Video</h2>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="max-width">
+        Copyright 2022. WENIV All rights reserved.
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

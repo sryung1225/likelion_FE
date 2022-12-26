@@ -1,0 +1,32 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* safari 100vh 주소창 가리는 이슈 해결 */
+@supports (-webkit-touch-callout: none) {
+  .wrap {
+    min-height: -webkit-fill-available;
+  }
+}
+.max-width {
+  /* background: rgba(0, 0, 0, 0.2); */
+  width: min(calc(var(--max-width) * 1rem), calc(100% - 10rem));
+  height: 100%;
+  margin: auto;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  z-index: 100;
+}
+main {
+  flex-grow: 1;
+}
+footer {
+  height: 5em;
+  background-color: #999;
+}

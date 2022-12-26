@@ -1,0 +1,24 @@
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(40rem, 80 / var(--max-width) * 100vw, 80rem);
+  background-color: #000;
+}
+.visual img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .5;
+}
+.visual h2 {
+  position: relative;
+  z-index: 10;
+  font-size: clamp(4em, 20 / var(--max-width)*100vw, 20rem);
+  color: rgba(var(--rgb-light), .2);
+  font-weight: bold;
+}
