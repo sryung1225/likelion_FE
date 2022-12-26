@@ -1,0 +1,27 @@
+.grid-section .max-width {
+  display: grid;
+  grid-template:
+    "title post" auto
+    "more post" 1fr / 1fr 3fr;
+}
+.grid-section .title {
+  grid-area: title;
+  background: #ddd;
+}
+.grid-section .post-list {
+  grid-area: post;
+  background: #aaa;
+}
+.grid-section .more {
+  grid-area: more;
+  background: #888;
+}
+
+.latest {
+  background-color: bar(--c-light-gray);
+}
+.video .max-width {
+  grid-template:
+    "post title" auto
+    "post more" 1fr / 3fr 1fr;
+}
