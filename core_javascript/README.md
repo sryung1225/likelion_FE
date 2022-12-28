@@ -3,6 +3,44 @@
 
 학습이 완료된 항목은 체크박스로 표시됩니다.
 
-- [x] Code Structure
-- [ ] Variables
-- [ ] Strict Mode
+- [x] Code Structure : 코드구조
+- [X] Variables : 변수와 상수
+- [X] Strict Mode : 엄격 모드
+- [X] Global This : 전역 객체
+- [X] Data Types : 자료형
+- [X] Type Conversion : 형 변환
+- [ ] Operations
+  - 기본 연산자와 수학
+  - 비교 연산자
+- [ ] Condition
+  - if와 '?'를 사용한 조건 처리
+  - 논리 연산자
+  - switch문
+  - nullish 병합 연산자 '??'
+- [ ] Loop
+  - while 문
+  - do ~ while 문
+  - for 문
+  - for ~ in 문
+  - for ~ of 문
+- [ ] Functions
+  - 함수
+  - 함수 표현식
+  - 화살표 함수 기본
+  - 재귀와 스택
+- [ ] Objects
+  - 객체
+  - 참조에 의한 객체 복사
+  - 가비지 컬렉션
+  - 메서드와 this
+  - 옵셔널 체이닝 '?.'
+- [ ] Symbol : 심볼형
+- [ ] Primitive Methods (Object Wrapper) : 원시값의 메서드
+- [ ] Number Type
+- [ ] String Type
+- [ ] Array Type
+- [ ] Array Methods
+- [ ] Iterable Object
+- [ ] Try Catch
+- [ ] Eval
+- [ ] Void
