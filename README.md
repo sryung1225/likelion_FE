@@ -33,3 +33,7 @@
 ### 🥨 Dart-Sass
 - 22/12/21/WED
 - directory : [/SASS/](SASS/)
+
+### 🍙 JavaScript
+- 22/12/27/TUE - 23/01/19/THU
+- directory : [/core_javascript/](core_javascript/)
