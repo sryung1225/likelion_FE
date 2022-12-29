@@ -9,7 +9,7 @@
 - [X] Global This : 전역 객체
 - [X] Data Types : 자료형
 - [X] Type Conversion : 형 변환
-- [ ] Operations
+- [X] Operations
   - 기본 연산자와 수학
   - 비교 연산자
 - [ ] Condition
