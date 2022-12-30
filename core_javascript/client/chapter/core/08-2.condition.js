@@ -47,9 +47,9 @@ console.log(whichTruthy); // ? 2
 
 
 let userName = prompt("사용자 이름을 입력해주세요", "");
-if (userName.toUpperCase() === "ADMIN"){
+if (userName?.toUpperCase() === "ADMIN"){
   let pw = prompt("비밀번호를 입력해 주세요.", "");
-  if(pw === "TheMaster"){
+  if(pw?.toLowerCase() === "themaster"){
     console.log("환영합니다.");
   } else {
     console.log("취소되었습니다.");
