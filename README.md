@@ -22,7 +22,7 @@
 - 23/01/02/MON
 - [https://www.codelion.net/class/VmlkZW9TdGVwTm9kZTpsZ3Fw](https://www.codelion.net/class/VmlkZW9TdGVwTm9kZTpsZ3Fw)
 - directory : [/tech!t__mbti_test/](tech!t__mbti_test/)
-- view : [index.html](https://sryung1225.github.io/likelion_FE/tech!t__mbti_test/)
+- view : [netlify](https://ryung-mbti-test.netlify.app/)
 
 ---
 
