@@ -13,6 +13,11 @@
 - directory : [/blog_skateboard/](blog_skateboard/)
 - view : [index.html](https://sryung1225.github.io/likelion_FE/blog_skateboard/)
 
+### 🎲 일단 만드는 JavaScript
+- 23/01/02/MON
+- [https://www.codelion.net/class/TGl2ZUNvZGluZ1N0ZXBOb2RlOjN6bWU=](https://www.codelion.net/class/TGl2ZUNvZGluZ1N0ZXBOb2RlOjN6bWU=)
+- directory : [/tech!t__js/](tech!t__js/)
+
 ---
 
 ## Lecture
