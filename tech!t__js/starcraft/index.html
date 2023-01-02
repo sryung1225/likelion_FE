@@ -15,20 +15,6 @@
 src="https://code.jquery.com/jquery-3.5.1.js"
 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 crossorigin="anonymous"></script>
-  <script>
-    var hp = 3;
-    $("#drone").click(function(){
-      $("#spit").fadeIn();
-      $("#spit").animate({left: "+=250"});
-      $("#spit").fadeOut(function(){
-        hp = hp - 1;
-        $("#hp").text("HP: " + hp);
-        if (hp == 0) {
-          $('#bunker').fadeOut();
-        }
-      });
-      $("#spit").css({left: "150px"});
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
