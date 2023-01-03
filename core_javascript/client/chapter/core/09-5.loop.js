@@ -2,46 +2,46 @@
 /* For Of Loop                                                            */
 /* ---------------------------------------------------------------------- */
 
-const languages = [
-  {
-    id: 'ecma-262',
-    name: 'JavaScript',
-    creator: 'Brendan Eich',
-    createAt: 1995,
-    standardName: 'ECMA-262',
-    currentVersion: 2022,
-  },
-  {
-    id: 'java',
-    name: 'Java',
-    creator: 'James Gosling',
-    createAt: 1995,
-    standardName: null,
-    currentVersion: 18,
-  },
-  {
-    id: 'ecma-334',
-    name: 'C#',
-    creator: 'Anders Hejlsberg',
-    createAt: 2000,
-    standardName: 'ECMA-334',
-    currentVersion: 8,
-  },
-];
+// const languages = [
+//   {
+//     id: 'ecma-262',
+//     name: 'JavaScript',
+//     creator: 'Brendan Eich',
+//     createAt: 1995,
+//     standardName: 'ECMA-262',
+//     currentVersion: 2022,
+//   },
+//   {
+//     id: 'java',
+//     name: 'Java',
+//     creator: 'James Gosling',
+//     createAt: 1995,
+//     standardName: null,
+//     currentVersion: 18,
+//   },
+//   {
+//     id: 'ecma-334',
+//     name: 'C#',
+//     creator: 'Anders Hejlsberg',
+//     createAt: 2000,
+//     standardName: 'ECMA-334',
+//     currentVersion: 8,
+//   },
+// ];
 
 
-// for ~ of 문
-// - 특정 조건에서 건너띄기
-for (let value of languages){
-  // console.table(value.name);
-  if (value.name === "Java") continue;
-  console.table(value);
-}
-// - 특정 조건에서 중단하기
-for (let value of languages){
-  if (value.name === "C#") break;
-  console.table(value);
-}
+// // for ~ of 문
+// // - 특정 조건에서 건너띄기
+// for (let value of languages){
+//   // console.table(value.name);
+//   if (value.name === "Java") continue;
+//   console.table(value);
+// }
+// // - 특정 조건에서 중단하기
+// for (let value of languages){
+//   if (value.name === "C#") break;
+//   console.table(value);
+// }
 
 
 
@@ -84,3 +84,55 @@ const randomUser = {
 // - for ~ in 문
 // - for ~ of 문
 // - 성능 비교 진단
+
+// for(let key in randomUser){
+//   console.log(key);
+// }
+
+// for(let value in randomUser){
+//   if(Object.prototype.hasOwnProperty.call(randomUser,value)){
+//     const L1 = randomUser[value];
+//     console.log('Level 1 : ' + value);
+//     if(typeof L1 === 'object'){
+//       for(let value in L1){
+//         if(Object.prototype.hasOwnProperty.call(L1,value)){
+//           const L2 = L1[value];
+//           console.log('\tLevel 2 : ' + value);
+//           if(typeof L2 === 'object'){
+//             for(let value in L2){
+//               if(Object.prototype.hasOwnProperty.call(L2,value)){
+//                 const L3 = L2[value];
+//                 console.log('\t\tLevel 3 : ' + value);
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// console.log(Object.values(randomUser));
+
+// for(let key of Object.keys(randomUser)){
+//   console.log(key);
+// }
+// for(let values of Object.values(randomUser)){
+//   console.log(values);
+// }
+
+for(let keyValue of Object.entries(randomUser)){
+  let key = keyValue[0]
+  let value = keyValue[1]
+
+  console.log('L1 : ' ,key);
+
+  if(typeof value === 'object'){
+    for(let keyValue of Object.entries(value)){
+      let key = keyValue[0]
+      let value = keyValue[1]
+
+      console.log('\t L2 : ' ,key);
+    }
+  }
+}
