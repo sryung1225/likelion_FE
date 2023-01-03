@@ -38,11 +38,21 @@ const user = {
   grades: [80,90,100],
   // totalGrades: () => {
   totalGrades: function(){
-    let total = 0;
-    this.grades.forEach(function(item){
-      total += item
-    })
-    return total;
+    // let total = 0;
+    // this.grades.forEach(function(item){
+    //   total += item
+    // })
+    // return total;
+
+    function foo(){
+      console.log("foo : ", this);
+    }
+    const bar = () => {
+      console.log("bar : ", this);
+    }
+    foo();         // ? foo :  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+    foo.call(user) // ? foo :  {name: 'ryung', age: 28, address: '경기도 용인시', grades: Array(3), totalGrades: ƒ}
+    bar()          // ? bar :  {name: 'ryung', age: 28, address: '경기도 용인시', grades: Array(3), totalGrades: ƒ}
   }
 }
 console.log(user.totalGrades());
