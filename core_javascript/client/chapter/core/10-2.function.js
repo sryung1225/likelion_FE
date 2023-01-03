@@ -66,22 +66,53 @@ console.log(calculateTotal(100,500,300,150,400,150));
 
 
 
-
-// 익명(이름이 없는) 함수 (표현)식
-let anonymousFunctionExpression = function (){};
-
-
-// 유명(이름을 가진) 함수 (표현)식
-let namedFunctionExpression = function hello (){};
-
-
 // 콜백 함수 (표현)식
-let callbackFunctionExpression;
+let callbackFunctionExpression = function (url, resolve, reject) {
+  // if(typeof url === "string" && url.includes("http") && url.includes("www")) {
+  if (typeof url === "string" && url.match(/http.+www/)) {
+    resolve(url);
+  } else {
+    reject();
+  }
+};
+callbackFunctionExpression(
+  "https://www.naver.com",
+  function (url) {
+    console.log(`${url} 해당 페이지로 이동합니다.`);
+  },
+  function () {
+    throw new Error("url 입력 정보가 올바르지 않습니다.");
+  }
+);
+
 
 
 // 함수 선언문 vs. 함수 (표현)식
+function aa() {}
+const bb = function () {};
+
 
 
 // 즉시 실행 함수 (표현)식
-// Immediately Invoked Function Expression
 let IIFE;
+// Immediately Invoked Function Expression
+
+
+const MASTER = (function($){ // parameter
+  const KEY = "sdfser%$^%$";
+  // 내가 내보내고 싶은 항목들만 내보낼꺼야
+  // 모듈로서의 활용
+  // 정보 은닉화 incapsulation : 외부의 접근을 차단
+  // 일부 정보만 노출
+
+  console.log($(".first"));
+  return {
+    getKey: function(){
+      return KEY
+    }
+  }
+})(getNode) // arguments
+// console.log(KEY); // ? Uncaught ReferenceError: KEY is not defined
+function getNode(node){
+  return document.querySelector(node);
+}
