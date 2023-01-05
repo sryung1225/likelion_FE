@@ -3,6 +3,22 @@
 /* ---------------------------------------------------------------------- */
 
 
+// 문자열을 이용한 브라우저 체킹 방법
+function checkBrowser(browserName) {
+  let browser;
+  let ua = navigator.userAgent.toLowerCase();
+  if (ua.indexOf("chrome") > -1) browser = "chrome";
+  else if (ua.indexOf("edge") > -1) browser = "edge";
+  else if (ua.indexOf("whale") > -1) browser = "whale";
+  else if (ua.indexOf("safari") > -1) browser = "safari";
+  else if (ua.indexOf("firefox") > -1) browser = "firefox";
+
+  return browser === browserName;
+}
+// navigator.userAgent.toLowerCase() 정보 사용
+// navigator.userAgent.toLowerCase().indexOf("chrome"); 양수값이 출력되면 그 브라우저임을 알려줌
+
+
 let message = 'Less is more.';
 
 // console.log(message);
