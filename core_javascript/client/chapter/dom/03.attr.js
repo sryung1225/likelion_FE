@@ -73,47 +73,16 @@ for(let value of first.attributes){
 first.dataset.play = "playing"; // set
 console.log(first.dataset.play); // get
 
-function attr(node, prop, value){
-  if(!value){
-    return getAttr(node, prop);
-  } else {
-    setAttr(node, prop, value);
-  }
-  // return !value ? getAttr(node, prop) : setAttr(node, prop, value);
-}
-console.log(attr(".first", "id")); // ? box
-
-// function attr 한 줄 표현
-// const attr = (node, prop, value) => !value ? getAttr(node, prop) : setAttr(node, prop, value);
-
-
-
-// 유틸 함수
-// get 함수 만들기
-function getAttr(node, prop){
-  if(typeof node == "string"){
-    node = getNode(node);
-    // node = document.querySelector(node);
-  }
-  return node.getAttribute(prop);
-}
 console.log(getAttr(".first", "class")); // ? first
+console.assert(getAttr('.first','class') !== "first"); // Assertion failed: console.assert // 에러일 때 콘솔창 노출
 console.log(getAttr(first, "data-play")); // ? playing
 
-
-// set 함수 만들기
-function setAttr(node, prop, value){
-  // validation : 확인
-  if(typeof node == "string") node = getNode(node);
-  if(typeof prop != "string") throw new TypeError("setAttr 함수의 두 번째 인자는 string이여야 합니다.");
-  if(prop.includes("data")) {
-    let rest = prop.slice(5); // "data-" 앞 다섯글자 삭제
-    node.dataset[rest] = value; // 그 다음 dataset에 넣어줘 value 제대로 적용
-  } // 고도화 작업용
-  if(!value) throw new SyntaxError("setAttr 함수의 세 번째 인자는 필수값입니다.");
-  node.setAttribute(prop, value);
-  // return하지 않는 이유는? set만 하고 값을 내는 것이 아니기 때문
-}
 setAttr(".first", "data-value", "hello"); // data-value="hello" 추가
-// <span class="first" id="box" data-play="palying"></span>
-// <span class="first" id="box" data-play="palying" data-value="hello"></span>
+
+console.log(attr(".first", "id")); // ? box
+
+
+let result = attr(".second", "id");
+console.log(result); // ? null // 원래 id가 없기 때문
+attr(".second", "id", "wow"); // id="wow" 셋팅
+console.log(attr(".second", "id")); // ? wow
