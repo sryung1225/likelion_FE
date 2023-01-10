@@ -63,42 +63,6 @@ let template = `<div class="box0${index}">앞앞</div>`;
 // - "beforeend" – elem의 마지막 자식 요소 바로 다음에 html을 삽입
 // - "afterend" – elem 바로 다음에 html을 삽입
 
-function insertBefore(node, text){
-  if(typeof node == "string") node = getNode(node);
-  if(node.nodeType !== document.ELEMENT_NODE){ // 작성 순서 유의. 위에서 string->node 우선 해줘야 함
-    throw new TypeError(
-      "insertBefore 함수의 첫 번째 인자는 ELEMENT 노드여야 합니다."
-    );
-  }
-  node.insertAdjacentHTML("beforebegin", text);
-}
-function insertFirst(node, text){
-  if(typeof node == "string") node = getNode(node);
-  if(node.nodeType !== document.ELEMENT_NODE){ // 작성 순서 유의. 위에서 string->node 우선 해줘야 함
-    throw new TypeError(
-      "insertFirst 함수의 첫 번째 인자는 ELEMENT 노드여야 합니다."
-    );
-  }
-  node.insertAdjacentHTML("afterbegin", text);
-}
-function insertLast(node, text){
-  if(typeof node == "string") node = getNode(node);
-  if(node.nodeType !== document.ELEMENT_NODE){ // 작성 순서 유의. 위에서 string->node 우선 해줘야 함
-    throw new TypeError(
-      "insertLast 함수의 첫 번째 인자는 ELEMENT 노드여야 합니다."
-    );
-  }
-  node.insertAdjacentHTML("beforeend", text);
-}
-function insertAfter(node, text){
-  if(typeof node == "string") node = getNode(node);
-  if(node.nodeType !== document.ELEMENT_NODE){ // 작성 순서 유의. 위에서 string->node 우선 해줘야 함
-    throw new TypeError(
-      "insertAfter 함수의 첫 번째 인자는 ELEMENT 노드여야 합니다."
-    );
-  }
-  node.insertAdjacentHTML("afterend", text);
-}
 insertBefore("h1", "비포");
 insertFirst("h1", "퍼스트");
 insertLast("h1", "라스트");
