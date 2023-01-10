@@ -71,3 +71,16 @@ for(let value of first.attributes){
 
 first.dataset.play = "playing"; // set
 console.log(first.dataset.play); // get
+
+
+// 유틸 함수
+// get 함수 만들기
+function getAttr(node, prop){
+  if(typeof node == "string"){
+    node = getNode(node);
+    // node = document.querySelector(node);
+  }
+  return node.getAttribute(prop);
+}
+console.log(getAttr(".first", "class")); // ? first
+console.log(getAttr(first, "data-play")); // ? playing
