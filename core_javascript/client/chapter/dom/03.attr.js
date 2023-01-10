@@ -69,8 +69,23 @@ for(let value of first.attributes){
 // - elementNode.dataset
 
 
+
 first.dataset.play = "playing"; // set
 console.log(first.dataset.play); // get
+
+function attr(node, prop, value){
+  if(!value){
+    return getAttr(node, prop);
+  } else {
+    setAttr(node, prop, value);
+  }
+  // return !value ? getAttr(node, prop) : setAttr(node, prop, value);
+}
+console.log(attr(".first", "id")); // ? box
+
+// function attr 한 줄 표현
+// const attr = (node, prop, value) => !value ? getAttr(node, prop) : setAttr(node, prop, value);
+
 
 
 // 유틸 함수
