@@ -63,6 +63,7 @@ let template = `<div class="box0${index}">앞앞</div>`;
 // - "beforeend" – elem의 마지막 자식 요소 바로 다음에 html을 삽입
 // - "afterend" – elem 바로 다음에 html을 삽입
 
+// lib/dom/insert.js 참고
 insertBefore("h1", "비포");
 insertFirst("h1", "퍼스트");
 insertLast("h1", "라스트");

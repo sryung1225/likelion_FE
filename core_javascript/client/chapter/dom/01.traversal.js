@@ -36,6 +36,7 @@ console.log(getNode(".first"));
 /* 문서 대상 확인 */
 // - matches
 // 선택자 안에 class/id 를 갖고 있는 대상이 있어?
+// lib/dom/getNode.js 참고
 console.log(getNode(".first").matches(".first"));
 
 // - contains

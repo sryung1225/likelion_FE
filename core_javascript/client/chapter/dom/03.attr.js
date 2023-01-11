@@ -69,10 +69,10 @@ for(let value of first.attributes){
 // - elementNode.dataset
 
 
-
 first.dataset.play = "playing"; // set
 console.log(first.dataset.play); // get
 
+// lib/dom/attr.js 참고
 console.log(getAttr(".first", "class")); // ? first
 console.assert(getAttr('.first','class') !== "first"); // Assertion failed: console.assert // 에러일 때 콘솔창 노출
 console.log(getAttr(first, "data-play")); // ? playing
