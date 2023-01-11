@@ -61,31 +61,9 @@ first.style.backgroundColor = "red"; // 배경 적용
 
 
 
-function getCss(node, prop){
-  if(typeof node == "string") node = getNode(node);
-  if(!prop in document.body.style){ // 정확한 css 속성인지 확인
-    syntaxError("getCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.");
-  }
-  return getComputedStyle(node)[prop];
-  // 자바스크립트에선 객체의 key, value 값을 변수로 받기 위해서는 . 사용 X
-  // [ ] 각괄호 표기법
-}
+// lib/dom/css.js 참고
+
 // console.log(getCss(".first", "font-size")); // ? 32px
-
-
-function setCss(node, prop, value){
-  if(typeof node == "string") node = getNode(node);
-  if(!prop in document.body.style){ // 정확한 css 속성인지 확인
-    syntaxError("setCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.");
-  }
-  if(!value) syntaxError("setCSS 함수의 세 번째 인자는 필수값 입니다.");
-  node.style[prop] = value;
-}
 // setCss(".first", "color", "blue"); // hello 색상 파란색 적용
-
-
-// getCss + setCss
-const css = (node, prop, value) => !value ? getCss(node, prop) : setCss(node, prop, value);
-
 console.log(css(".first", "font-size"));
 css(".first", "color", "blue");
