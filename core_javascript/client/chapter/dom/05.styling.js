@@ -44,7 +44,42 @@ removeClass(".first", "hello");
 
 // - style.cssText - "style" 속성 전체에 대응하므로 스타일 전체에 대한 문자열 저장
 
+first.style.transform = "rotate(360deg)"; // hello가 휘리릭 돌아감
+first.style.backgroundColor = "red"; // 배경 적용
+
+
 
 /* 계산된 스타일 읽기 ------------------------------------------------------- */
 
 // - getComputedStyle(element, [pseudoElement]) `읽기 전용`
+
+// let size = getComputedStyle(first).fontSize;
+// console.log(size); // ? 32px
+
+// let margin = getComputedStyle(first).margin;
+// console.log(margin); // ? 0px
+
+
+
+function getCss(node, prop){
+  if(typeof node == "string") node = getNode(node);
+  if(!prop in document.body.style){ // 정확한 css 속성인지 확인
+    syntaxError("getCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.");
+  }
+  return getComputedStyle(node)[prop];
+  // 자바스크립트에선 객체의 key, value 값을 변수로 받기 위해서는 . 사용 X
+  // [ ] 각괄호 표기법
+}
+console.log(getCss(".first", "font-size")); // ? 32px
+
+
+function setCss(node, prop, value){
+  if(typeof node == "string") node = getNode(node);
+  if(!prop in document.body.style){ // 정확한 css 속성인지 확인
+    syntaxError("setCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.");
+  }
+  if(!value) syntaxError("setCSS 함수의 세 번째 인자는 필수값 입니다.");
+  node.style[prop] = value;
+}
+setCss(".first", "color", "blue");
+
