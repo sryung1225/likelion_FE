@@ -1,5 +1,12 @@
 
+// let arr = [{
+//   name:'tiger',
+//   age: 34,
+// },2,3,4];
+// arr[0].name  // ? tiger
 
+
+// 이벤트 위임 !
 
 const data = [
   {
@@ -24,10 +31,33 @@ const data = [
   }
 ]
 
+// 비주얼 안에 있는 이미지를 가져온다
+// 이미지의 src 속성에 접근한다
+// src의 값을 index로 바꾼다
+// alt 변경
 
+const navigation = getNode(".navigation");
+const visualImage = getNode(".visual img");
 
+function makeArray(arrayLike){
+  return Array.from(arrayLike)
+}
 
+function handler(e){
+  let target = e.target.closest("li");
+  if(!target) return;
 
+  let list = makeArray(navigation.children);
+  let index = attr(target, "data-index");
+
+  list.forEach(item=>removeClass(item, "is-active"));
+
+  attr(visualImage, "src", `./assets/part01/${data[index-1].src}`);
+  attr(visualImage, "alt", data[index-1].alt);
+
+  addClass(target, "is-active");
+}
+navigation.addEventListener("click", handler);
 
 
 
