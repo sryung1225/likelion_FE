@@ -44,15 +44,17 @@ function makeArray(arrayLike){
 }
 
 function handler(e){
+  e.preventDefault();
   let target = e.target.closest("li");
-  if(!target) return;
+  let targetA = e.target.closest('a');
+  if(!target || !targetA) return;
 
   let list = makeArray(navigation.children);
   let index = attr(target, "data-index");
 
   list.forEach(item=>removeClass(item, "is-active"));
 
-  attr(visualImage, "src", `./assets/part01/${data[index-1].src}`);
+  attr(visualImage, "src", targetA.href);
   attr(visualImage, "alt", data[index-1].alt);
 
   addClass(target, "is-active");
