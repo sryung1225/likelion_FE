@@ -1,5 +1,5 @@
 // addClass
-function addClass(node, className){
+export function addClass(node, className){
   if(typeof node == "string"){
     node = getNode(node);
   }
@@ -10,7 +10,7 @@ function addClass(node, className){
 }
 
 // removeClass
-function removeClass(node, className){
+export function removeClass(node, className){
   if(typeof node == "string"){
     node = getNode(node);
   }
@@ -26,7 +26,7 @@ function removeClass(node, className){
 }
 
 // toggleClass
-function toggleClass(node, className){
+export function toggleClass(node, className){
   if(typeof node == "string"){
     node = getNode(node);
   }
@@ -58,4 +58,4 @@ function setCss(node, prop, value){
 }
 
 // css (getCss + setCss)
-const css = (node, prop, value) => !value ? getCss(node, prop) : setCss(node, prop, value);
+export const css = (node, prop, value) => !value ? getCss(node, prop) : setCss(node, prop, value);

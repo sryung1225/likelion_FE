@@ -1,3 +1,13 @@
+import {
+  getNode,
+  css,
+  addClass,
+  removeClass,
+  refError,
+  typeError
+} from "./lib/index.js";
+
+
 //1. 인풋 밸류값 가져오기
 //2. 이벤트 핸들러 연결하기
 //3. 이벤트 기본동작 차단하기
