@@ -9,9 +9,27 @@ const secondInput = getNode("#secondNumber");
 const doneBtn = getNode("#done");
 const result = getNode(".result");
 
-function sum(e){
-  e.preventDefault();
-  let i = +firstInput.value + +secondInput.value;
-  result.innerHTML = i;
+// node가 input인지를 한 번 검토하고 value를 줌
+function getInputValue(node){
+  if(typeof node === "string") node = getNode(node);
+  if(node.tagName !== "INPUT") refError("getInputValue 함수는 INPUT ELEMENT만 허용합니다.");
+  return node.value;
 }
-doneBtn.addEventListener("click", sum);
+
+const sum = (A, B) => A+B;
+
+function clearContents(node){
+  if(typeof node === "string") node = getNode(node);
+  node.textContent = "";
+}
+
+function calc(e){
+  e.preventDefault();
+  let firstValue = +getInputValue(firstInput);
+  let secondValue = +getInputValue(secondInput);
+  let total = sum(firstValue, secondValue);
+  clearContents(result);
+  insertLast(result, total);
+}
+
+doneBtn.addEventListener("click", calc);
