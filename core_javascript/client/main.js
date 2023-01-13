@@ -4,4 +4,14 @@
 //4. 두 수의 합을 더해주기
 //5. 화면에 출력하기
 
+const firstInput = getNode("#firstNumber");
+const secondInput = getNode("#secondNumber");
+const doneBtn = getNode("#done");
+const result = getNode(".result");
 
+function sum(e){
+  e.preventDefault();
+  let i = +firstInput.value + +secondInput.value;
+  result.innerHTML = i;
+}
+doneBtn.addEventListener("click", sum);
