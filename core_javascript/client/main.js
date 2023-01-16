@@ -1,2 +1,2 @@
-console.log("hello~");
-console.log(window);
+
+import { diceAnimation} from "./lib/index.js";
