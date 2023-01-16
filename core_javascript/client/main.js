@@ -20,11 +20,12 @@ function clickSubmitHandler(e){
 
   if(!name || isNumericString(name)){
     // console.log("이름을 제대로 입력해주세요!");
-    showAlert(".alert-error", "이름을 입력해주세요!", 2000);
+    showAlert(".alert-error", "정확한 이름을 입력해주세요!", 2000);
     return;
   }
 
   clearContents(result);
   insertLast(result, pick);
 }
+
 submit.addEventListener("click", clickSubmitHandler);
