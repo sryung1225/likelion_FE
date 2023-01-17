@@ -6,3 +6,10 @@ h1 {
   line-height: 100vh;
   text-align: center;
 }
+.first{
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: all 1s;
+}
