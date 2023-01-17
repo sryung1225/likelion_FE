@@ -9,7 +9,7 @@
 
 
 // xhrData 함수 만들기 method, url
-function xhrData({
+export function xhrData({
   url = "",
   method = "GET",
   body = null,
@@ -33,9 +33,7 @@ function xhrData({
     if(status >= 200 && status < 400){
       if(readyState === 4){
         console.log("통신 성공");
-
         onSuccess(JSON.parse(response));
-        console.log();
       }
     } else {
       onFail("통신 실패");
