@@ -1,2 +1,1 @@
-console.log("hello~");
-console.log(window);
+import { } from "./lib/index.js";
