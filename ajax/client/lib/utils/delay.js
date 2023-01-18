@@ -43,15 +43,15 @@ export function delayP(options = {}){
     }, timeout);
   })
 }
-// delayP({
-//   data: "진짜 성공",
-//   errorMessage: "오류가 발생했다!!"
-// }).then((res)=>{
-//   console.log(res);
-// })
-// delayP(3000).then((res)=>{
-//   console.log(res);
-// })
+delayP({
+  data: "진짜 성공",
+  errorMessage: "오류가 발생했다!!"
+}).then((res)=>{
+  console.log(res);
+})
+delayP(3000).then((res)=>{
+  console.log(res);
+})
 
 
 // 위 콜백지옥을 프라미스를 이용해 개선할 수 있음
@@ -67,3 +67,12 @@ export function delayP(options = {}){
 // .then(() => {
 //   first.style.top = "0px";
 // });
+
+
+// async await
+
+async function delayA(){
+  return "완료";
+}
+let result = await delayA();
+console.log(result); // ? 완료
