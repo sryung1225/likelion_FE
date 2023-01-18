@@ -123,12 +123,37 @@ export function xhrPromise(options = {}){
   })
 }
 
-xhrPromise({
-  url: "https://jsonplaceholder.typicode.com/users/1"
-})
-.then((res) => {
-  console.log(res);
-})
-.catch((err) => {
-  console.log(err);
-})
+xhrPromise.get = (url) => {
+  return xhrPromise({
+    url
+  })
+};
+xhrPromise.post = (url, body) => {
+  return xhrPromise({
+    url,
+    body,
+    method:"POST"
+  })
+}
+xhrPromise.put = (url, body) => {
+  return xhrPromise({
+    url,
+    body,
+    method:"PUT"
+  })
+}
+xhrPromise.delete = (url) => {
+  return xhrPromise({
+    url,
+    method:"DELETE"
+  })
+}
+
+// xhrPromise
+// .get("https://jsonplaceholder.typicode.com/users/1")
+// .then((res) => {
+//   insertLast("body", JSON.stringify(res));
+// })
+// .catch((err) => {
+//   insertLast("body", "데이터 로딩에 실패했습니다.");
+// });
