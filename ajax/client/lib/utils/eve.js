@@ -12,7 +12,7 @@ const defaultOptions = {
   }
 }
 
-const eve = async (options = {}) => {
+export const eve = async (options = {}) => {
   const {url, ...restOptions} = {
     ...defaultOptions,
     ...options,
@@ -58,4 +58,4 @@ eve.delete = (url, options) => {
   })
 }
 
-eve.post("https://jsonplaceholder.typicode.com/users/1", {name: "ryung"}, {mode: "cors", headers: {}});
+// eve.post("https://jsonplaceholder.typicode.com/users/1", {name: "ryung"}, {mode: "cors", headers: {}});
