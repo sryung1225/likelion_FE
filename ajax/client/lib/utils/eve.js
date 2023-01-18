@@ -6,7 +6,7 @@ const defaultOptions = {
   cache: 'no-cache',
   credential: 'same-origin',
   redirect:'follow',
-  referrerPlicy:'no-reffere',
+  referrerPlicy:'no-refferer',
   headers:{
     'Content-Type':'application/json; charset=UTF-8'
   }
@@ -28,14 +28,14 @@ export const eve = async (options = {}) => {
   // console.log(response);
   return response;
 }
-eve.get = (url, options) => {
-  eve({
+eve.get = async (url, options) => {
+  return eve({
     url,
     ...options // 받는 options가 객체이기 때문에 펼쳐서 받음
   })
 }
 eve.post = (url, body, options) => {
-  eve({
+  return eve({
     method: "POST",
     url,
     body: JSON.stringify(body),
@@ -43,7 +43,7 @@ eve.post = (url, body, options) => {
   })
 }
 eve.put = (url, body, options) => {
-  eve({
+  return eve({
     method: "PUT",
     url,
     body: JSON.stringify(body),
@@ -51,7 +51,7 @@ eve.put = (url, body, options) => {
   })
 }
 eve.delete = (url, options) => {
-  eve({
+  return eve({
     method: "DELETE",
     url,
     ...options
