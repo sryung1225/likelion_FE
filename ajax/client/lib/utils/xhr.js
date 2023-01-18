@@ -86,3 +86,49 @@ xhrData.delete = (body, url, onSuccess, onFail) => {
 //     console.error(err);
 //   }
 // )
+
+
+
+// promise API
+
+const defaultOptions = {
+  url: "",
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  },
+  body: null
+}
+
+export function xhrPromise(options = {}){
+  const xhr = new XMLHttpRequest();
+  const {method, url, body, headers} = Object.assign({}, defaultOptions, options);
+  // const {method, url, body, headers} = {...defaultOptions, ...options}; // 도 위와 동일 (깊복 방법)
+  
+  if(!url) typeError("서버와 통신할 url 인자는 반드시 필요합니다."); // url 미지정 알럿 용도 조건
+  xhr.open(method, url);
+  xhr.send(body ? JSON.stringify(body) : null); // 기본값 자체가 null이지만 혹시나 하는 방어용 조건문 사용
+
+  return new Promise((resolve,reject) => {
+    xhr.addEventListener("readystatechange",() => {
+      const {status, readyState, response} = xhr;
+
+      if(status >=200 && status < 400) {
+        if(readyState === 4){
+          resolve(JSON.parse(response));
+        }
+      } else reject("에러입니다.");
+    })
+  })
+}
+
+xhrPromise({
+  url: "https://jsonplaceholder.typicode.com/users/1"
+})
+.then((res) => {
+  console.log(res);
+})
+.catch((err) => {
+  console.log(err);
+})
