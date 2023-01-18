@@ -9,15 +9,15 @@ function delay(callback, timeout = 1000){
 }
 
 // 콜백지옥
-delay(()=>{
-  first.style.top = "-100px";
-  delay(()=>{
-    first.style.transform = "rotate(360deg)";
-    delay(()=>{
-      first.style.top = "0px";
-    })
-  })
-})
+// delay(()=>{
+//   first.style.top = "-100px";
+//   delay(()=>{
+//     first.style.transform = "rotate(360deg)";
+//     delay(()=>{
+//       first.style.top = "0px";
+//     })
+//   })
+// })
 
 // 프라미스
 const defaultOptions = {
@@ -26,7 +26,7 @@ const defaultOptions = {
   data: "성공했습니다",
   errorMessage: "알 수 없는 오류가 발생했습니다."
 }
-function delayP(options = {}){
+export function delayP(options = {}){
   let config = {...defaultOptions}; // spread 통해서 얕은 복사 : 기본값
   
   if(isNumber(options)){
@@ -43,27 +43,27 @@ function delayP(options = {}){
     }, timeout);
   })
 }
-delayP({
-  data: "진짜 성공",
-  errorMessage: "오류가 발생했다!!"
-}).then((res)=>{
-  console.log(res);
-})
+// delayP({
+//   data: "진짜 성공",
+//   errorMessage: "오류가 발생했다!!"
+// }).then((res)=>{
+//   console.log(res);
+// })
 // delayP(3000).then((res)=>{
 //   console.log(res);
 // })
 
 
 // 위 콜백지옥을 프라미스를 이용해 개선할 수 있음
-delayP()
-.then(() => {
-  first.style.top = "-100px";
-  return delayP();
-})
-.then(() => {
-  first.style.transform = "rotate(360deg)";
-  return delayP();
-})
-.then(() => {
-  first.style.top = "0px";
-});
+// delayP()
+// .then(() => {
+//   first.style.top = "-100px";
+//   return delayP();
+// })
+// .then(() => {
+//   first.style.transform = "rotate(360deg)";
+//   return delayP();
+// })
+// .then(() => {
+//   first.style.top = "0px";
+// });
