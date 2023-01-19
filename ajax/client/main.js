@@ -1,3 +1,5 @@
+/* global gsap */
+
 import {
   xhrData,
   insertLast,
@@ -27,5 +29,17 @@ async function renderingUserList(){
   // console.log(userData); // ? (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
 
   userData.forEach(data => renderUserCard(userCardContainer, data));
+
+  // console.log(gsap.utils.toArray(".user-card")); // ? (10) [article.user-card, article.user-card, ... ]
+  gsap.to(gsap.utils.toArray(".user-card"), {
+    x: 100,
+    rotation: 360,
+    duration: 3,
+    // stagger: 0.3,
+    stagger: {
+      each: 0.1,
+      from: "edge"
+    },
+  });
 }
 renderingUserList();
