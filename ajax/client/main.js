@@ -1,21 +1,15 @@
-import { xhrData, insertLast, xhrPromise, eve } from "./lib/index.js";
+import {
+  xhrData,
+  insertLast,
+  xhrPromise,
+  eve
+} from "./lib/index.js";
 
+// renderingUserList 함수 만들기
+// ajax (eve) get user List
 
-// xhrPromise
-// .get("https://jsonplaceholder.typicode.com/users/1")
-// .then((res) => {
-//   insertLast("body", JSON.stringify(res));
-// })
-// .catch((err) => {
-//   insertLast("body", "데이터 로딩에 실패했습니다.");
-// });
-
-// xhrData.get(
-//   "https://jsonplaceholder.typicode.com/users",
-//   (res) => {
-//     insertLast("body", JSON.stringify(res));
-//   },
-//   (err) => {
-//     insertLast("body", "데이터 로딩에 실패했습니다.");
-//   }
-// )
+async function renderingUserList(){
+  let response = await eve.get("https://jsonplaceholder.typicode.com/users");
+	console.log(response.data); // ? (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+}
+renderingUserList();
