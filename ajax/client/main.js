@@ -3,11 +3,12 @@
 import {
   insertLast,
   eve,
-  getNode,
+  getNode as $,
   renderUserCard,
   changeColor,
   delayP,
-  renderSpinner
+  renderSpinner,
+  renderEmptyCard
 } from "./lib/index.js";
 
 // renderingUserList 함수 만들기
@@ -21,7 +22,7 @@ import {
 // 3. 만들어진 함수 안에 createUserCard 를 던지고,
 // 4. renderUserCard 함수를 사용했을 때 렌더링이 잘 될 수 있도록
 
-const userCardContainer = getNode(".user-card-inner");
+const userCardContainer = $(".user-card-inner");
 
 async function renderingUserList(){
 
@@ -29,9 +30,9 @@ async function renderingUserList(){
 
   try {
     await delayP(2000); // 2초동안 대기....
-    getNode(".loadingSpinner").remove(); // 대기 이후 로딩스피너 안보이게
+    $(".loadingSpinner").remove(); // 대기 이후 로딩스피너 안보이게
 
-    let response = await eve.get("https://jsonplaceholder.typicode.com/users");
+    let response = await eve.get("https://jsonplaceholder.typicode.com/user");
 
     let userData = response.data;
     // console.log(userData); // ? (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
@@ -48,7 +49,7 @@ async function renderingUserList(){
       stagger: 0.2,
     });
   } catch(err){
-    console.log(err);
+    renderEmptyCard(userCardContainer);
   }
 }
 renderingUserList();
