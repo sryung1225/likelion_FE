@@ -8,7 +8,9 @@ import {
   changeColor,
   delayP,
   renderSpinner,
-  renderEmptyCard
+  renderEmptyCard,
+  getNodes,
+  attr
 } from "./lib/index.js";
 
 // renderingUserList 함수 만들기
@@ -32,7 +34,7 @@ async function renderingUserList(){
     await delayP(2000); // 2초동안 대기....
     $(".loadingSpinner").remove(); // 대기 이후 로딩스피너 안보이게
 
-    let response = await eve.get("https://jsonplaceholder.typicode.com/user");
+    let response = await eve.get("https://jsonplaceholder.typicode.com/users");
 
     let userData = response.data;
     // console.log(userData); // ? (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
@@ -53,3 +55,15 @@ async function renderingUserList(){
   }
 }
 renderingUserList();
+
+// 삭제 버튼을 클릭하면 콘솔창에 '삭제' 글자가 출력이 될 수 있도록 만들어 주세요.
+function handler(e){
+  let deleteBtn = e.target.closest("button");
+  let article = e.target.closest("article");
+
+  if(!deleteBtn || !article) return;
+
+  let id = attr(article, "data-index").slice(5);
+  eve.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+}
+userCardContainer.addEventListener("click", handler);
