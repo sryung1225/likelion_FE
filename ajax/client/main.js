@@ -34,7 +34,7 @@ async function renderingUserList(){
     await delayP(2000); // 2초동안 대기....
     $(".loadingSpinner").remove(); // 대기 이후 로딩스피너 안보이게
 
-    let response = await eve.get("https://jsonplaceholder.typicode.com/users");
+    let response = await eve.get("http://localhost:3000/users");
 
     let userData = response.data;
     // console.log(userData); // ? (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
@@ -64,6 +64,9 @@ function handler(e){
   if(!deleteBtn || !article) return;
 
   let id = attr(article, "data-index").slice(5);
-  eve.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+  eve.delete(`http://localhost:3000/users/${id}`).then(() => {
+    userCardContainer.innerHTML = '';
+    renderingUserList();
+  })
 }
 userCardContainer.addEventListener("click", handler);
