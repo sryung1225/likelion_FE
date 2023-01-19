@@ -1,13 +1,13 @@
 /* global gsap */
 
 import {
-  xhrData,
   insertLast,
-  xhrPromise,
   eve,
   getNode,
   renderUserCard,
-  changeColor
+  changeColor,
+  delayP,
+  renderSpinner
 } from "./lib/index.js";
 
 // renderingUserList 함수 만들기
@@ -24,25 +24,31 @@ import {
 const userCardContainer = getNode(".user-card-inner");
 
 async function renderingUserList(){
-  let response = await eve.get("https://jsonplaceholder.typicode.com/users");
 
-  let userData = response.data;
-  // console.log(userData); // ? (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+  renderSpinner(userCardContainer); // 로딩스피너 렌더링
 
-  userData.forEach(data => renderUserCard(userCardContainer, data));
+  try {
+    await delayP(2000); // 2초동안 대기....
+    getNode(".loadingSpinner").remove(); // 대기 이후 로딩스피너 안보이게
 
-  changeColor(".user-card");
-  
-  // console.log(gsap.utils.toArray(".user-card")); // ? (10) [article.user-card, article.user-card, ... ]
-  gsap.to(gsap.utils.toArray(".user-card"), {
-    x: 100,
-    rotation: 360,
-    duration: 3,
-    // stagger: 0.3,
-    stagger: {
-      each: 0.1,
-      from: "edge"
-    },
-  });
+    let response = await eve.get("https://jsonplaceholder.typicode.com/users");
+
+    let userData = response.data;
+    // console.log(userData); // ? (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+
+    userData.forEach(data => renderUserCard(userCardContainer, data));
+
+    changeColor(".user-card");
+
+    // console.log(gsap.utils.toArray(".user-card")); // ? (10) [article.user-card, article.user-card, ... ]
+    gsap.to(gsap.utils.toArray(".user-card"), {
+      x: 0,
+      opacity: 1,
+      duration: 1.5,
+      stagger: 0.2,
+    });
+  } catch(err){
+    console.log(err);
+  }
 }
 renderingUserList();
