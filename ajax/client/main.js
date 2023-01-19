@@ -6,7 +6,8 @@ import {
   xhrPromise,
   eve,
   getNode,
-  renderUserCard
+  renderUserCard,
+  changeColor
 } from "./lib/index.js";
 
 // renderingUserList 함수 만들기
@@ -30,6 +31,8 @@ async function renderingUserList(){
 
   userData.forEach(data => renderUserCard(userCardContainer, data));
 
+  changeColor(".user-card");
+  
   // console.log(gsap.utils.toArray(".user-card")); // ? (10) [article.user-card, article.user-card, ... ]
   gsap.to(gsap.utils.toArray(".user-card"), {
     x: 100,
