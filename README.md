@@ -13,6 +13,17 @@
 - directory : [/blog_skateboard/](blog_skateboard/)
 - view : [index.html](https://sryung1225.github.io/likelion_FE/blog_skateboard/)
 
+### 🎲 일단 만드는 JavaScript
+- 23/01/02/MON
+- [https://www.codelion.net/class/VmlkZW9TdGVwTm9kZTpqZHg4](https://www.codelion.net/class/VmlkZW9TdGVwTm9kZTpqZHg4)
+- directory : [/tech!t__js/](tech!t__js/)
+
+### 📯 실검에 오르는 세렝게티 동물 테스트 만들기
+- 23/01/02/MON
+- [https://www.codelion.net/class/VmlkZW9TdGVwTm9kZTpsZ3Fw](https://www.codelion.net/class/VmlkZW9TdGVwTm9kZTpsZ3Fw)
+- directory : [/tech!t__mbti_test/](tech!t__mbti_test/)
+- view : [netlify](https://ryung-mbti-test.netlify.app/)
+
 ---
 
 ## Lecture
@@ -33,3 +44,7 @@
 ### 🥨 Dart-Sass
 - 22/12/21/WED
 - directory : [/SASS/](SASS/)
+
+### 🍙 JavaScript
+- 22/12/27/TUE - 23/01/19/THU
+- directory : [/core_javascript/](core_javascript/)
