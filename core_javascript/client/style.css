@@ -1,8 +1,60 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 h1 {
-  line-height: 100vh;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  /* translate(-50%, -50%) */
+}
+span{
+  display: inline-block;
+  transition: all .5s;
+}
+span.is-active{
+  transform: translateY(-300px);
+}
+
+.ground {
+  width: 600px;
+  height: 400px;
+  background-color: greenyellow;
+  border: 10px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.ball {
+  transition: all .3s;
+  pointer-events: none; /* 더블 클릭하면 공이 원래자리로 가는 문제 해결 */
+}
+.emotion {
+  font-size: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.visual {
+  padding: 1.5rem;
+  background-color: dodgerblue;
+}
+.news {
+  padding: 1rem;
+  background-color: orange;
+}
+.desc {
+  padding: 1rem;
+  background-color: hotpink;
+}
+
+.pop {
+  display: none;
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background-color: rgba(0,0,0,0.5);
 }
