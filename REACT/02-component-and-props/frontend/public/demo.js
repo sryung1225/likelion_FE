@@ -26,15 +26,17 @@ class Logo extends React.Component {
 const reactDomRoot = ReactDOM.createRoot(document.getElementById('root'));
 
 reactDomRoot.render(
-  // with JSX
-  // <div role="group" lang="en">
-  //   <Logo />
-  // </div>
+  [
+    // with JSX
+    <div role="group" lang="en">
+      <Logo />
+    </div>
 
-  // without JSX
-  React.createElement(
-    'div',
-    { role: 'group', lang: 'en' },
-    React.createElement(Logo),
-  )
+    // without JSX
+    React.createElement(
+      'div',
+      { role: 'group', lang: 'en', key: "without-jsx" },
+      React.createElement(Logo),
+    )
+  ]
 );

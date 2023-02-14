@@ -17,12 +17,14 @@ class Event {
   // 비공개(private) 필드
   // 접근 제어자
   #uid = '';
+  #type;
+  #date;
 
   // 생성자(constructor)
   constructor(type, date) {
     // this는 생성된 Event 클래스의 인스턴스(객체)를 말함
-    this.type = type;
-    this.date = date;
+    this.#type = type;
+    this.#date = date;
     this.#uid = generateUniqueId();
   }
 
@@ -30,9 +32,14 @@ class Event {
   // 생성된 객체만 사용 가능한 메서드
   // 인스턴스 메서드
   getType() {
-    return this.type;
+    return this.#type;
   }
-
+  getDate() {
+    return this.#date;
+  }
+  setDate(newDate) {
+    this.#date = newDate;
+  }
   getUid() {
     return this.#uid;
   }
