@@ -20,20 +20,13 @@ import { Group } from './learn/react.components.js';
 // 2. 생성된 ReactDOM의 루트 요소(객체)를 통해 실제 DOM에 렌더링 한다.
 // reactDomRoot.render();
 
+// const React루트객체 = ReactDOM.루트요소생성하기(실제 DOM 요소)
+// React루트객체.렌더링(React 엘리먼트);
+
 const reactDomRoot = ReactDOM.createRoot(document.getElementById('root'));
 
 reactDomRoot.render(
-  // React 컴포넌트 -> React 엘리먼트
-  
-  // 한 번 작성하는 용
+  // HTML, XML
+  <div role="group" lang="en">Group Element</div>
   // React.createElement(Group)
-  // 리액트 월드에서 root는 단 한개만 존재해야 하기 때문에, 여러번 작성하기 위해서는 [] 로 묶어줘서 사용해야 함
-
-  // 여러번 작성하는 용
-  [
-    React.createElement(Group),
-    React.createElement(Group),
-    React.createElement(Group),
-    React.createElement(Group)
-  ]
 );
