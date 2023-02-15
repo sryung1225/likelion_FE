@@ -1,5 +1,11 @@
-const App = () => console.log('callReact');
+import App from './components/App.js'
 
-function createElement(type, props, ...children) {
-  return { type, props: { ...props, children } }
-}
+/* -------------------------------------------------------------------------- */
+
+const reactDomRoot = ReactDOM.createRoot(document.getElementById('root'));
+
+reactDomRoot.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
