@@ -1,6 +1,13 @@
-export default {
+const babelConfig = {
   presets: [
-    "@babel/preset-env",
-    "@babel/preset-react"
-  ]
+    [
+      '@babel/preset-env',
+      {
+        modules: false,
+      },
+    ],
+    '@babel/preset-react',
+  ],
 };
+
+export default babelConfig;

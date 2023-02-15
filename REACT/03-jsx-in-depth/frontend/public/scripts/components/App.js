@@ -1,5 +1,3 @@
-"use strict";
-
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -20,22 +18,17 @@ var App = /*#__PURE__*/function (_React$Component) {
     var _this;
     _classCallCheck(this, App);
     _this = _super.call(this, props);
-    // component state
     _this.state = {
       headline: 'React Application'
     };
-
-    // component methods binding `this`
     _this.handleChangeHeadline = _this.handleChangeHeadline.bind(_assertThisInitialized(_this));
     return _this;
   }
-
-  // this.handleChangeHeadline
   _createClass(App, [{
     key: "handleChangeHeadline",
     value: function handleChangeHeadline() {
       this.setState({
-        headline: 'NEW HEADLINE!! 🎯'
+        headline: 'NEW HEADLINE! 😃'
       });
     }
   }, {
@@ -46,8 +39,9 @@ var App = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/React.createElement("h1", null, this.state.headline), /*#__PURE__*/React.createElement("button", {
         type: "button",
         onClick: this.handleChangeHeadline
-      }, "\uD5E4\uB4DC\uB77C\uC778 \uBCC0\uACBD"));
+      }, "\uD5E4\uB4DC\uB77C\uC778 \uC5C5\uB370\uC774\uD2B8"));
     }
   }]);
   return App;
 }(React.Component);
+export default App;
