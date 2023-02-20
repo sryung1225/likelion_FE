@@ -1,4 +1,6 @@
 class Counter extends React.Component {
+
+  // 개발자의 기본 props
   static defaultProps = {
     min: 0,
     count: 0,
@@ -6,6 +8,8 @@ class Counter extends React.Component {
     step: 1,
   };
 
+  // 업데이트 가능한 상태
+  // 최초의 1회만 props → state (파생)
   state = {
     count: this.props.count,
   };
@@ -61,10 +65,12 @@ class Counter extends React.Component {
 }
 
 const counterContainer = document.querySelector('[data-component="Counter"]');
+// ReactDOMRoot { render }
 const reactDomRoot = ReactDOM.createRoot(counterContainer);
 reactDomRoot.render(
   <>
     <Counter />
+    {/* 사용자의 props */}
     <Counter min={7} count={9} max={16} step={4} />
   </>
 );
