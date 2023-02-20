@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from '../assets/logo.svg';
 
 function App() {
+  // console.log('rendering App Component');
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="React" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <code>src/App.js</code> 파일을 수정하면{' '}
+          <abbr title="Hot Moudle Replacement">HMR</abbr>, Live Reload 됩니다.
         </p>
         <a
           className="App-link"
@@ -15,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          React 배우러 가보자구
         </a>
       </header>
     </div>
