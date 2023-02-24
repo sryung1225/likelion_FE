@@ -24,6 +24,14 @@
 //   `;
 // }
 
+/**
+  * HTML 요소 생성 유틸리티 함수
+  * @param {string} type HTML 요소 이름
+  * @param {{}} props HTML 속성 객체
+  * @param  {...any} children 자식 요소 집합
+  * @returns {HTMLElement}
+*/
+
 /* -------------------------------------------------------------------------- */
 
 export function createElement(type, props, ...children) {
@@ -39,10 +47,19 @@ export function createElement(type, props, ...children) {
   }
 
   return element;
+
+  /**
+    * 렌더링 함수
+    * @param {{ headline: string; description: string; subjects: string[]}} state 상태 변수
+  */
 }
 
 /* -------------------------------------------------------------------------- */
 
+// 상태 변수 ----------------------------------------------------------------------
+// - 제목(headline)
+// - 설명(description)
+// - 학습 주제(subjects)
 export let state = {
   headline: '웹브라우저 환경에서 React 라이브러리 시작하기',
   description:
@@ -53,14 +70,12 @@ export let state = {
   ],
 };
 
+// 컨테이너 DOM 요소
 const rootElement = document.getElementById('root');
 
-function reset() {
-  rootElement.innerHTML = '';
-}
-
 export function render(state) {
-  reset();
+  // 초기화
+  rootElement.innerHTML = '';
 
   const container = document.createElement('div');
   container.classList.add('container', 'container--md');
@@ -83,21 +98,27 @@ export function render(state) {
   rootElement.append(container);
 }
 
+/**
+  * 업데이트 함수
+  * @param {{ headline?: string; description?: string; subjects?: string[]}} newState 업데이트 할 상태
+*/
 export function update(newState) {
-
+  // 학습 주제가 문자 값인 경우
   if (typeof newState.subjects === 'string') {
     let newSubject = newState.subjects;
     newState.subjects = [newSubject];
   }
 
+  // 상태(객체) 합성
   state = {
     ...state,
     ...newState,
     subjects: [
       ...state.subjects,
-      ...(newState.subjects ? newState.subjects : [])
-    ]
+      ...(newState.subjects ? newState.subjects : []),
+    ],
   };
 
+  // Re-렌더링
   render(state);
 }
