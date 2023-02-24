@@ -12,75 +12,51 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-import LogIn from './pages/LogIn.js';
-import Browse from './pages/Browse.js';
-import Product from './pages/Product.js';
-import LikelionMember from './pages/LikelionMember.js';
-var App = /*#__PURE__*/function (_React$Component) {
-  _inherits(App, _React$Component);
-  var _super = _createSuper(App);
-  function App() {
+import { likeLionMembers } from '../data/likeLionMembers.js';
+
+// console.log(likeLionMembers);
+var Home = /*#__PURE__*/function (_React$Component) {
+  _inherits(Home, _React$Component);
+  var _super = _createSuper(Home);
+  function Home() {
     var _this;
-    _classCallCheck(this, App);
+    _classCallCheck(this, Home);
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
-      headline: 'React Application',
-      // isDisabled: false,
-      isPaid: true,
-      isToggle: false,
-      isLoading: false,
-      hasError: null
+      members: likeLionMembers
     });
-    _defineProperty(_assertThisInitialized(_this), "originalHeadline", _this.state.headline);
-    _defineProperty(_assertThisInitialized(_this), "willUpdateHeadline", 'NEW HEADLINE! 😃');
-    _defineProperty(_assertThisInitialized(_this), "unknown", null);
-    _defineProperty(_assertThisInitialized(_this), "handleChangeHeadline", function () {
-      if (_this.state.isToggle) {
-        _this.setState({
-          isToggle: false,
-          headline: _this.originalHeadline
-        });
-      } else {
-        _this.setState({
-          isToggle: true,
-          headline: _this.willUpdateHeadline
-        });
-      }
+    _defineProperty(_assertThisInitialized(_this), "handleFilterLab", function () {
+      console.log('filtering');
     });
     return _this;
   }
-  _createClass(App, [{
+  _createClass(Home, [{
     key: "render",
     value: function render() {
-      var _this$state = this.state,
-        isToggle = _this$state.isToggle,
-        isPaid = _this$state.isPaid,
-        headline = _this$state.headline,
-        isLoading = _this$state.isLoading,
-        hasError = _this$state.hasError;
-      if (isLoading) {
-        return /*#__PURE__*/React.createElement("div", {
-          role: "alert"
-        }, "\uB370\uC774\uD130 \uB85C\uB529 \uC911...");
-      }
-      if (hasError) {
-        return /*#__PURE__*/React.createElement("div", {
-          role: "alert"
-        }, hasError.message);
-      }
-      return /*#__PURE__*/React.createElement(LikelionMember, null);
-      return /*#__PURE__*/React.createElement("div", {
-        className: "App"
-      }, /*#__PURE__*/React.createElement("h1", null, headline), /*#__PURE__*/React.createElement("button", {
-        // disabled={this.state.isDisabled}
+      var products = this.state.products;
+      var figcaptionStyle = {
+        display: 'flex',
+        gap: 12
+      };
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, "\uBA4B\uC7C1\uC774 \uC0AC\uC790\uCC98\uB7FC \uD504\uB860\uD2B8\uC5D4\uB4DC \uC2A4\uCFE8 4\uAE30 \uBA64\uBC84"), /*#__PURE__*/React.createElement("button", {
         type: "button",
-        onClick: this.handleChangeHeadline
-      }, isToggle ? '오리지널 헤드라인으로 변경' : '뉴 헤드라인으로 변경'), /*#__PURE__*/React.createElement(LogIn, null), isPaid && /*#__PURE__*/React.createElement(Browse, null));
+        style: {
+          marginBottom: 10
+        },
+        onClick: this.handleFilterLab
+      }, "10\uC870 \uBAA8\uC5EC!"), /*#__PURE__*/React.createElement("ul", null, this.state.members.map(function (_ref) {
+        var id = _ref.id,
+          name = _ref.name,
+          gender = _ref.gender;
+        return /*#__PURE__*/React.createElement("li", {
+          key: id
+        }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("span", null, gender.includes('여성') ? '🙆🏻‍♀️' : '🙆🏻‍♂️'), " ", name));
+      })));
     }
   }]);
-  return App;
+  return Home;
 }(React.Component);
-export default App;
+export default Home;

@@ -1,6 +1,7 @@
 import LogIn from './pages/LogIn.js';
 import Browse from './pages/Browse.js';
 import Product from './pages/Product.js';
+import LikelionMember from './pages/LikelionMember.js';
 
 class App extends React.Component {
 
@@ -43,7 +44,7 @@ class App extends React.Component {
       return <div role="alert">{hasError.message}</div>
     }
     return (
-      <Product />
+      <LikelionMember />
     )
     return (
       <div className="App">
