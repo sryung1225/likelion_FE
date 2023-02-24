@@ -2,6 +2,8 @@ import LogIn from './pages/LogIn.js';
 import Browse from './pages/Browse.js';
 import Product from './pages/Product.js';
 import LikelionMember from './pages/LikelionMember.js';
+import EventHandling from './pages/EventHandling.js';
+import DescriptionListRendering from './pages/DescriptionListRendering.js';
 
 class App extends React.Component {
 
@@ -43,21 +45,14 @@ class App extends React.Component {
     if (hasError) {
       return <div role="alert">{hasError.message}</div>
     }
-    return (
-      <LikelionMember />
-    )
+    // return (
+    //   <LikelionMember />
+    // )
     return (
       <div className="App">
         <h1>{headline}</h1>
-        <button
-          // disabled={this.state.isDisabled}
-          type="button"
-          onClick={this.handleChangeHeadline}
-        >
-          {isToggle ? '오리지널 헤드라인으로 변경' : '뉴 헤드라인으로 변경'}
-        </button>
-        <LogIn />
-        {isPaid && <Browse />}
+        <DescriptionListRendering />
+        <EventHandling />
       </div>
     );
   }
