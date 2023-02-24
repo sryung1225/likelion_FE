@@ -2,6 +2,7 @@ import LogIn from './pages/LogIn.js';
 import Browse from './pages/Browse.js';
 import Product from './pages/Product.js';
 import LikelionMember from './pages/LikelionMember.js';
+import { likeLionMembers } from './data/likeLionMembers.js';
 
 class App extends React.Component {
 
@@ -11,7 +12,8 @@ class App extends React.Component {
     isPaid: true,
     isToggle: false,
     isLoading: false,
-    hasError: null
+    hasError: null,
+    likeLionMembers: likeLionMembers
   };
 
   originalHeadline = this.state.headline;
@@ -35,7 +37,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { isToggle, isPaid, headline, isLoading, hasError } = this.state;
+    const { isToggle, isPaid, headline, isLoading, hasError, likeLionMembers } = this.state;
 
     if (isLoading) {
       return <div role="alert">데이터 로딩 중...</div>
@@ -44,7 +46,7 @@ class App extends React.Component {
       return <div role="alert">{hasError.message}</div>
     }
     return (
-      <LikelionMember />
+      <LikelionMember likeLionMembers={likeLionMembers} />
     )
     return (
       <div className="App">
