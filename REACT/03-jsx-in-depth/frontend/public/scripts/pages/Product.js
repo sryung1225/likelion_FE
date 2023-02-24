@@ -12,74 +12,54 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-import LogIn from './pages/LogIn.js';
-import Browse from './pages/Browse.js';
-import Product from './pages/Product.js';
-var App = /*#__PURE__*/function (_React$Component) {
-  _inherits(App, _React$Component);
-  var _super = _createSuper(App);
-  function App() {
+var Product = /*#__PURE__*/function (_React$Component) {
+  _inherits(Product, _React$Component);
+  var _super = _createSuper(Product);
+  function Product() {
     var _this;
-    _classCallCheck(this, App);
+    _classCallCheck(this, Product);
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
-      headline: 'React Application',
-      // isDisabled: false,
-      isPaid: true,
-      isToggle: false,
-      isLoading: false,
-      hasError: null
-    });
-    _defineProperty(_assertThisInitialized(_this), "originalHeadline", _this.state.headline);
-    _defineProperty(_assertThisInitialized(_this), "willUpdateHeadline", 'NEW HEADLINE! 😃');
-    _defineProperty(_assertThisInitialized(_this), "unknown", null);
-    _defineProperty(_assertThisInitialized(_this), "handleChangeHeadline", function () {
-      if (_this.state.isToggle) {
-        _this.setState({
-          isToggle: false,
-          headline: _this.originalHeadline
-        });
-      } else {
-        _this.setState({
-          isToggle: true,
-          headline: _this.willUpdateHeadline
-        });
-      }
+      products: [{
+        id: 'product-dkfj',
+        name: '웰치스',
+        price: 980,
+        image: 'https://img.danawa.com/prod_img/500000/648/889/img/16889648_1.jpg?shrink=500:500&_v=20221021170923'
+      }, {
+        id: 'product-ekdi',
+        name: '두부 1kg',
+        price: 2180,
+        image: 'https://contents.lotteon.com/itemimage/_v105312/LF/14/37/17/3_/0/LF1437173_0_2.jpg/dims/resizef/720X720'
+      }]
     });
     return _this;
   }
-  _createClass(App, [{
+  _createClass(Product, [{
     key: "render",
     value: function render() {
-      var _this$state = this.state,
-        isToggle = _this$state.isToggle,
-        isPaid = _this$state.isPaid,
-        headline = _this$state.headline,
-        isLoading = _this$state.isLoading,
-        hasError = _this$state.hasError;
-      if (isLoading) {
-        return /*#__PURE__*/React.createElement("div", {
-          role: "alert"
-        }, "\uB370\uC774\uD130 \uB85C\uB529 \uC911...");
-      }
-      if (hasError) {
-        return /*#__PURE__*/React.createElement("div", {
-          role: "alert"
-        }, hasError.message);
-      }
-      return /*#__PURE__*/React.createElement(Product, null);
-      return /*#__PURE__*/React.createElement("div", {
-        className: "App"
-      }, /*#__PURE__*/React.createElement("h1", null, headline), /*#__PURE__*/React.createElement("button", {
-        // disabled={this.state.isDisabled}
-        type: "button",
-        onClick: this.handleChangeHeadline
-      }, isToggle ? '오리지널 헤드라인으로 변경' : '뉴 헤드라인으로 변경'), /*#__PURE__*/React.createElement(LogIn, null), isPaid && /*#__PURE__*/React.createElement(Browse, null));
+      var products = this.state.products;
+
+      // console.log(products[0]);
+      // console.log(products[1]);
+
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, "\uB9AC\uC2A4\uD2B8 \uB80C\uB354\uB9C1"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("figure", {
+        "data-id": products[0].id
+      }, /*#__PURE__*/React.createElement("img", {
+        src: products[0].image,
+        height: 100,
+        alt: ""
+      }), /*#__PURE__*/React.createElement("figcaption", null, /*#__PURE__*/React.createElement("span", null, products[0].name), /*#__PURE__*/React.createElement("span", null, products[0].price)))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("figure", {
+        "data-id": products[1].id
+      }, /*#__PURE__*/React.createElement("img", {
+        src: products[1].image,
+        height: 100,
+        alt: ""
+      }), /*#__PURE__*/React.createElement("figcaption", null, /*#__PURE__*/React.createElement("span", null, products[1].name), /*#__PURE__*/React.createElement("span", null, products[1].price))))));
     }
   }]);
-  return App;
+  return Product;
 }(React.Component);
-export default App;
+export default Product;
