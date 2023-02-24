@@ -1,13 +1,13 @@
+import { likeLionMembers } from '../data/likeLionMembers.js';
+
 class LikelionMember extends React.Component {
   state = {
-    members: this.props.likeLionMembers ?? { LikelionMember }
+    members: likeLionMembers
   };
 
-  handleFilterLab = () => {
+  handleFilterLab = (labNumber) => {
     this.setState({
-      members: this.state.members.filter(member => {
-        return member.lab === 11;
-      })
+      members: this.state.members.filter(member => member.lab === labNumber)
     });
   }
 
@@ -26,7 +26,7 @@ class LikelionMember extends React.Component {
         <button
           type="button"
           style={{ marginBottom: 20 }}
-          onClick={this.handleFilterLab}
+          onClick={() => this.handleFilterLab(11)}
         >
           11조 모여!
         </button>

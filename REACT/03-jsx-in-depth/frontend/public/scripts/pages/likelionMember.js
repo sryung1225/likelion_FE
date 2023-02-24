@@ -12,11 +12,11 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+import { likeLionMembers } from '../data/likeLionMembers.js';
 var LikelionMember = /*#__PURE__*/function (_React$Component) {
   _inherits(LikelionMember, _React$Component);
   var _super = _createSuper(LikelionMember);
   function LikelionMember() {
-    var _this$props$likeLionM;
     var _this;
     _classCallCheck(this, LikelionMember);
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -24,14 +24,12 @@ var LikelionMember = /*#__PURE__*/function (_React$Component) {
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
-      members: (_this$props$likeLionM = _this.props.likeLionMembers) !== null && _this$props$likeLionM !== void 0 ? _this$props$likeLionM : {
-        LikelionMember: LikelionMember
-      }
+      members: likeLionMembers
     });
-    _defineProperty(_assertThisInitialized(_this), "handleFilterLab", function () {
+    _defineProperty(_assertThisInitialized(_this), "handleFilterLab", function (labNumber) {
       _this.setState({
         members: _this.state.members.filter(function (member) {
-          return member.lab === 11;
+          return member.lab === labNumber;
         })
       });
     });
@@ -40,6 +38,7 @@ var LikelionMember = /*#__PURE__*/function (_React$Component) {
   _createClass(LikelionMember, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
       var products = this.state.products;
       var figcaptionStyle = {
         display: 'flex',
@@ -50,7 +49,9 @@ var LikelionMember = /*#__PURE__*/function (_React$Component) {
         style: {
           marginBottom: 20
         },
-        onClick: this.handleFilterLab
+        onClick: function onClick() {
+          return _this2.handleFilterLab(11);
+        }
       }, "11\uC870 \uBAA8\uC5EC!"), /*#__PURE__*/React.createElement("ul", null, this.state.members.map(function (_ref) {
         var id = _ref.id,
           lab = _ref.lab,

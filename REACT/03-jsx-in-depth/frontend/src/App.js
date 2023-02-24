@@ -2,7 +2,6 @@ import LogIn from './pages/LogIn.js';
 import Browse from './pages/Browse.js';
 import Product from './pages/Product.js';
 import LikelionMember from './pages/LikelionMember.js';
-import { likeLionMembers } from './data/likeLionMembers.js';
 
 class App extends React.Component {
 
@@ -12,8 +11,7 @@ class App extends React.Component {
     isPaid: true,
     isToggle: false,
     isLoading: false,
-    hasError: null,
-    likeLionMembers: likeLionMembers
+    hasError: null
   };
 
   originalHeadline = this.state.headline;
@@ -46,7 +44,7 @@ class App extends React.Component {
       return <div role="alert">{hasError.message}</div>
     }
     return (
-      <LikelionMember likeLionMembers={likeLionMembers} />
+      <LikelionMember />
     )
     return (
       <div className="App">
