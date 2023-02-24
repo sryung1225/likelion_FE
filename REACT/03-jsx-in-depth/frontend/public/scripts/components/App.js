@@ -23,26 +23,47 @@ var App = /*#__PURE__*/function (_React$Component) {
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
-      headline: 'React Application'
+      headline: 'React Application',
+      isDisabled: false,
+      isToggle: false,
+      isLoading: false
     });
     _defineProperty(_assertThisInitialized(_this), "originalHeadline", _this.state.headline);
+    _defineProperty(_assertThisInitialized(_this), "willUpdateHeadline", 'NEW HEADLINE! 😃');
     _defineProperty(_assertThisInitialized(_this), "handleChangeHeadline", function () {
-      _this.setState({
-        headline: 'NEW HEADLINE! 😃'
-      });
+      var assignHeadlineContent = '';
+      if (_this.state.isToggle) {
+        _this.setState({
+          isToggle: false,
+          headline: _this.originalHeadline
+        });
+      } else {
+        _this.setState({
+          isToggle: true,
+          headline: _this.willUpdateHeadline
+        });
+      }
     });
     return _this;
   }
   _createClass(App, [{
     key: "render",
     value: function render() {
-      console.log(this);
+      var _this$state = this.state,
+        isToggle = _this$state.isToggle,
+        headline = _this$state.headline;
+      if (this.state.isLoading) {
+        return /*#__PURE__*/React.createElement("div", {
+          role: "alert"
+        }, "\uB370\uC774\uD130 \uB85C\uB529 \uC911...");
+      }
       return /*#__PURE__*/React.createElement("div", {
         "data-component": "App"
-      }, /*#__PURE__*/React.createElement("h1", null, this.state.headline), /*#__PURE__*/React.createElement("button", {
+      }, /*#__PURE__*/React.createElement("h1", null, headline), /*#__PURE__*/React.createElement("button", {
+        // disabled={this.state.isDisabled}
         type: "button",
         onClick: this.handleChangeHeadline
-      }, "\uD5E4\uB4DC\uB77C\uC778 \uC5C5\uB370\uC774\uD2B8"));
+      }, isToggle ? '오리지널 헤드라인으로 변경' : '뉴 헤드라인으로 변경'));
     }
   }]);
   return App;
