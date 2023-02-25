@@ -1,7 +1,8 @@
 {
+  // ie9 대응하는 예시 (babel과 비슷한 역할을 하는 ts)
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "ES3",
+    "module": "UMD",
     "noEmitOnError": true
   }
 }
