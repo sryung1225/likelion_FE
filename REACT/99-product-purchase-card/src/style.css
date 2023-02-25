@@ -1,0 +1,247 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+body {
+  background-color: #ccc;
+}
+
+button {
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 460px;
+}
+
+.product-purchange-card {
+  box-sizing: border-box;
+  width: clamp(360px, 100vw, 800px);
+  margin: 50px;
+  padding: 16px 16px 10px;
+  background-color: #ffffff;
+}
+.product__image {
+  display: block;
+  width: 100%;
+  height: 183px;
+  object-fit: cover;
+}
+.product__title {
+  margin-top: 16px;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 23px;
+  word-break: keep-all;
+}
+.product__price, .product__delivery, .product__count {
+  padding: 12px 0;
+  border-bottom: 1px solid #dee0e3;
+}
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+}
+.product__price .sale-rate {
+  color: #6b90dc;
+  font-size: 24px;
+}
+.product__price .price {
+  display: flex;
+  align-items: center;
+}
+.product__price .price--original {
+  padding-right: 6px;
+  color: #999999;
+  font-size: 16px;
+  font-weight: bold;
+}
+.product__price .price--sale {
+  font-size: 22px;
+}
+.product__delivery {
+  display: block;
+  font-size: 14px;
+}
+.product__delivery .delivery__price {
+  position: relative;
+  padding-left: 13px;
+}
+.product__delivery .delivery__price::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  display: inline-block;
+  width: 1px;
+  height: calc(100% - 6px);
+  margin: 0 6px;
+  background-color: #dee0e3;
+}
+.product__delivery .delivery__price--desc {
+  padding-left: 3px;
+  color: #6b90dc;
+}
+.product__delivery .delivery__option {
+  padding-top: 4px;
+  color: #999999;
+}
+.product__count .counter {
+  display: inline-block;
+  border: 1px solid #dee0e3;
+}
+.product__count .counter--btn {
+  width: 34px;
+  height: 34px;
+  background-color: #f1f2f4;
+}
+.product__count .counter--text {
+  display: inline-block;
+  width: 40px;
+  line-height: 34px;
+  text-align: center;
+  vertical-align: top;
+}
+.product__sum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 6px;
+}
+.product__sum .sum__text {
+  display: flex;
+  align-items: center;
+}
+.product__sum .sum__help {
+  position: relative;
+  height: 16px;
+  margin-left: 3px;
+}
+.product__sum .sum__help .help-btn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #dee0e3;
+  font-size: 11px;
+  font-weight: bold;
+  vertical-align: top;
+}
+.product__sum .sum__help .help-tooltip {
+  position: absolute;
+  top: 26px;
+  left: 4px;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-sizing: border-box;
+  width: 296px;
+  padding: 16px 44px 16px 16px;
+  border: 1px solid #dee0e3;
+  background-color: #ffffff;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+}
+.product__sum .sum__help .help-tooltip .point {
+  color: #6b90dc;
+}
+.product__sum .sum__help .help-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #dee0e3;
+  transform: rotate(45deg);
+}
+.product__sum .sum__help .help-tooltip-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+}
+.product__sum .sum__help .help-tooltip-close::before, .product__sum .sum__help .help-tooltip-close::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background-color: #000;
+}
+.product__sum .sum__help .help-tooltip-close::before {
+  transform: rotate(45deg);
+}
+.product__sum .sum__help .help-tooltip-close::after {
+  transform: rotate(135deg);
+}
+.product__sum .sum__result {
+  display: flex;
+  align-items: center;
+}
+.product__sum .sum__count {
+  color: #999999;
+}
+.product__sum .sum__count::after {
+  content: "|";
+  display: inline-block;
+  padding: 0 4px;
+}
+.product__sum .sum__price {
+  color: #6b90dc;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+}
+.product__purchase {
+  width: 100%;
+  height: 48px;
+  margin: 10px 0;
+  background-color: #03c75a;
+  border-radius: 6px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 28px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.product__purchase .naver-shopping {
+  display: inline-block;
+  overflow: hidden;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  background: url(../public/assets/IconNaver--active.png) no-repeat center;
+  vertical-align: middle;
+  text-indent: 28px;
+}
+.product__purchase:hover {
+  background-color: #0aae4f;
+}
+.product__purchase:disabled {
+  background-color: #dee0e3;
+  color: #999999;
+}
+.product__purchase:disabled .naver-shopping {
+  background: url(../public/assets/IconNaver--disabled.png);
+}

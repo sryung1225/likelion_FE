@@ -1,0 +1,265 @@
+@use "reset.scss";
+@use "variables.scss";
+@use "mixins.scss";
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 460px;
+}
+
+.product {
+  &-purchange-card {
+    box-sizing: border-box;
+    width: clamp(360px, 100vw, 800px);
+    margin: 50px;
+    padding: 16px 16px 10px;
+    background-color: variables.$white;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 183px;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-top: 16px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 23px;
+    word-break: keep-all;
+  }
+
+  &__price,
+  &__delivery,
+  &__count {
+    padding: 12px 0;
+    border-bottom: 1px solid variables.$gray-200;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    line-height: 22px;
+    letter-spacing: -.2px;
+
+    .sale-rate {
+      color: variables.$secondary;
+      font-size: 24px;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+
+      &--original {
+        padding-right: 6px;
+        color: variables.$gray-300;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &--sale {
+        font-size: 22px;
+      }
+    }
+  }
+
+  // product__price
+
+  &__delivery {
+    display: block;
+    font-size: 14px;
+
+    .delivery {
+      &__price {
+        position: relative;
+        padding-left: 13px;
+
+        &::before {
+          content: "";
+          @include mixins.pos(absolute, 3px, null, 3px, 0);
+          display: inline-block;
+          width: 1px;
+          height: calc(100% - 6px);
+          margin: 0 6px;
+          background-color: variables.$gray-200;
+        }
+
+        &--desc {
+          padding-left: 3px;
+          color: variables.$secondary;
+        }
+      }
+
+      &__option {
+        padding-top: 4px;
+        color: variables.$gray-300;
+      }
+    }
+  }
+
+  &__count {
+    .counter {
+      display: inline-block;
+      border: 1px solid variables.$gray-200;
+
+      &--btn {
+        width: 34px;
+        height: 34px;
+        background-color: variables.$gray-100;
+      }
+
+      &--text {
+        display: inline-block;
+        width: 40px;
+        line-height: 34px;
+        text-align: center;
+        vertical-align: top;
+      }
+    }
+  }
+
+  &__sum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 6px;
+
+    .sum {
+      &__text {
+        display: flex;
+        align-items: center;
+      }
+
+      &__help {
+        position: relative;
+        height: 16px;
+        margin-left: 3px;
+
+        .help {
+          &-btn {
+            @include mixins.dis(inline-block, 16px, 16px);
+            border: 1px solid variables.$gray-200;
+            font-size: 11px;
+            font-weight: bold;
+            vertical-align: top;
+          }
+
+          &-tooltip {
+            @include mixins.pos(absolute, 26px, null, null, 4px);
+            transform: translateX(-50%);
+            z-index: 10;
+            box-sizing: border-box;
+            width: 296px;
+            padding: 16px 44px 16px 16px;
+            border: 1px solid variables.$gray-200;
+            background-color: variables.$white;
+            font-size: 12px;
+            letter-spacing: -.2px;
+
+            .point {
+              color: variables.$secondary;
+            }
+
+            &::before {
+              content: "";
+              @include mixins.pos(absolute, -5px, null, null, 50%);
+              @include mixins.dis(inline-block, 7px, 7px);
+              background-color: variables.$white;
+              border-width: 1px 0 0 1px;
+              border-style: solid;
+              border-color: variables.$gray-200;
+              transform: rotate(45deg);
+            }
+
+            &-close {
+              @include mixins.pos(absolute, 8px, 12px, null, null);
+              @include mixins.dis(inline-block, 22px, 22px);
+              padding: 3px;
+
+              &::before,
+              &::after {
+                content: "";
+                @include mixins.pos(absolute, null, null, null, 3px);
+                @include mixins.dis(inline-block, 16px, 1px);
+                background-color: #000;
+              }
+
+              &::before {
+                transform: rotate(45deg);
+              }
+
+              &::after {
+                transform: rotate(135deg);
+              }
+            }
+          }
+        }
+      }
+
+      &__result {
+        display: flex;
+        align-items: center;
+      }
+
+      &__count {
+        color: variables.$gray-300;
+
+        &::after {
+          content: "|";
+          display: inline-block;
+          padding: 0 4px;
+        }
+      }
+
+      &__price {
+        color: variables.$secondary;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: -.2px;
+      }
+    }
+  }
+
+  &__purchase {
+    width: 100%;
+    height: 48px;
+    margin: 10px 0;
+    background-color: variables.$primary-100;
+    border-radius: 6px;
+    color: variables.$white;
+    text-align: center;
+    line-height: 28px;
+    font-size: 15px;
+    font-weight: bold;
+
+    .naver-shopping {
+      display: inline-block;
+      overflow: hidden;
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      background: url(../public/assets/IconNaver--active.png) no-repeat center;
+      vertical-align: middle;
+      text-indent: 28px;
+    }
+
+    &:hover {
+      background-color: variables.$primary-200;
+    }
+
+    &:disabled {
+      background-color: variables.$gray-200;
+      color: variables.$gray-300;
+
+      .naver-shopping {
+        background: url(../public/assets/IconNaver--disabled.png)
+      }
+    }
+  }
+}
