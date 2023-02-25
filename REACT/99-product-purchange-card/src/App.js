@@ -3,9 +3,8 @@ import "./style.css";
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+    <div className="product-purchange-card">
+      <img src="assets/productImage.jpg" alt="래피젠 코로나 자가 검사 키트" />
     </div>
   );
 }
