@@ -1,28 +1,48 @@
 import React from 'react'
 
-const MinusButton = ({ onClick }) => {
-  return <button onClick={onClick}>-</button>
-}
+const CounterContext = React.createContext(null)
 
-const PlusButton = ({ onClick }) => {
-  return <button onClick={onClick}>+</button>
-}
-
-const Viewer = ({ children }) => {
-  return <span>{children}</span>
-}
-
-const Counter = ({ value: init }) => {
-  const [value, setState] = React.useState(init)
+const CounterContextProvider = (props) => {
+  const [value, setState] = React.useState(props.value)
   const minus = () => setState(value - 1)
   const plus = () => setState(value + 1)
+  const context = { value, minus, plus }
 
   return (
-    <>
-      <MinusButton onClick={minus} />
-      <Viewer>{value}</Viewer>
-      <PlusButton onClick={plus} />
-    </>
+    <CounterContext.Provider value={context}>
+      {props.children}
+    </CounterContext.Provider>
+  )
+}
+
+// 커스텀 훅
+const useCounterContext = () => {
+  return React.useContext(CounterContext)
+}
+
+const MinusButton = () => {
+  // const { minus } = React.useContext(CounterContext)
+  const { minus } = useCounterContext()
+  return <button onClick={minus}>-</button>
+}
+
+const PlusButton = () => {
+  const { plus } = useCounterContext()
+  return <button onClick={plus}>+</button>
+}
+
+const Viewer = () => {
+  const { value } = useCounterContext()
+  return <span>{value}</span>
+}
+
+const Counter = (props) => {
+  return (
+    <CounterContextProvider value={props.value}>
+      <MinusButton />
+      <Viewer />
+      <PlusButton />
+    </CounterContextProvider>
   )
 }
 
