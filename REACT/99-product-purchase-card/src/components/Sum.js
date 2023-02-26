@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sum = () => {
+const Sum = ({ count, salePrice }) => {
   return (
     <React.Fragment>
       <div className="product__sum">
@@ -15,8 +15,8 @@ const Sum = () => {
           </div>
         </b>
         <span className="sum__result">
-          <span className="sum__count">총 수량 1개</span>
-          <span className="sum__price" aria-label="총 상품 금액">6,370원</span>
+          <span className="sum__count">총 수량 {count}개</span>
+          <span className="sum__price" aria-label="총 상품 금액">{(salePrice * count).toLocaleString('ko-KR')}원</span>
         </span>
       </div>
     </React.Fragment>

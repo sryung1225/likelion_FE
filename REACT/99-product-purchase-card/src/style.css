@@ -241,16 +241,15 @@ button {
   background-color: #03c75a;
   border-radius: 6px;
   color: #ffffff;
-  text-align: center;
   line-height: 28px;
   font-size: 15px;
   font-weight: bold;
 }
 .product__purchase .naver-shopping {
   display: inline-block;
-  overflow: hidden;
   width: 28px;
   height: 28px;
+  overflow: hidden;
   margin-right: 8px;
   background: url(../public/assets/IconNaver--active.png) no-repeat center;
   vertical-align: middle;

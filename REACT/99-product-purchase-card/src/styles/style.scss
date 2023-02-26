@@ -105,9 +105,7 @@
         &::before {
           content: "";
           @include mixins.pos(absolute, 3px, null, 3px, 0);
-          display: inline-block;
-          width: 1px;
-          height: calc(100% - 6px);
+          @include mixins.dis(inline-block, 1px, calc(100% - 6px));
           margin: 0 6px;
           background-color: variables.$gray-200;
         }
@@ -137,8 +135,7 @@
       }
 
       &--text {
-        display: inline-block;
-        width: 40px;
+        @include mixins.dis(inline-block, 40px, null);
         line-height: 34px;
         text-align: center;
         vertical-align: top;
@@ -255,16 +252,13 @@
     background-color: variables.$primary-100;
     border-radius: 6px;
     color: variables.$white;
-    text-align: center;
     line-height: 28px;
     font-size: 15px;
     font-weight: bold;
 
     .naver-shopping {
-      display: inline-block;
+      @include mixins.dis(inline-block, 28px, 28px);
       overflow: hidden;
-      width: 28px;
-      height: 28px;
       margin-right: 8px;
       background: url(../public/assets/IconNaver--active.png) no-repeat center;
       vertical-align: middle;
