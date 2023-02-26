@@ -67,9 +67,31 @@
         font-size: 22px;
       }
     }
-  }
 
-  // product__price
+    .sale-rate::before,
+    .price--original::before,
+    .price--sale::before {
+      overflow: hidden;
+      position: absolute !important;
+      clip: rect(0, 0, 0, 0);
+      clip-path: inset(50%);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+    }
+
+    .sale-rate::before {
+      content: "할인율";
+    }
+
+    .price--original::before {
+      content: "정가";
+    }
+
+    .price--sale::before {
+      content: "할인가";
+    }
+  }
 
   &__delivery {
     display: block;
