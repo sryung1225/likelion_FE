@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import HelpTooltip from './HelpTooltip';
 
 const Sum = ({ count, salePrice }) => {
+
+  const [tooltip, setTooltip] = useState(false);
+  const onTooltipToogle = () => {
+    setTooltip(!tooltip);
+  }
   return (
     <React.Fragment>
       <div className="product__sum">
         <b className="sum__text">
           총 상품 금액
           <div className="sum__help">
-            <button className="help-btn" type="button" aria-label="도움말" aria-expanded="false" aria-haspopup="true">?</button>
-            <div className="help-tooltip">
-              총 상품금액에 <span className="point">배송비는 포함되어 있지 않습니다.</span><br />결제시 배송비가 추가될 수 있습니다.
-              <button className="help-tooltip-close" type="button" aria-label="도움말 닫기"></button>
-            </div>
+            <button
+              className="help-btn" type="button" aria-label="도움말"
+              onClick={onTooltipToogle}
+              aria-expanded={tooltip}
+              aria-haspopup="true"
+            >?</button>
+            {!tooltip ? null : <HelpTooltip onTooltipToogle={onTooltipToogle} />}
           </div>
         </b>
         <span className="sum__result">
