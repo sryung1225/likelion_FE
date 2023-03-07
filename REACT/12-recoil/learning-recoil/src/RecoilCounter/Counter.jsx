@@ -2,12 +2,16 @@ import Count from './Count';
 import CountButton from './CountButton';
 import classes from './Counter.module.css';
 
-import { useRecoilState } from 'recoil';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { countState } from '@/@store/countState';
 
 export default function Counter() {
+  // 읽기(GET)/쓰기(SET) useRecoilState
+  // 읽기(GET)           useRecoilValue
+  // 쓰기(SET)           useSetRecoilState
 
-  const [count, setCount] = useRecoilState(countState);
+  const count = useRecoilValue(countState); // 읽기(GET)
+  const setCount = useSetRecoilState(countState); // 쓰기(SET)
 
   return (
     <div className={classes.RecoilCounter}>
