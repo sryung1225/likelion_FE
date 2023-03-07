@@ -19,6 +19,7 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks'],
   rules: {
+    'react/prop-types': 'off', /* recoil과 비교 위해서 type 비교 끔 */
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': [
       'warn',
