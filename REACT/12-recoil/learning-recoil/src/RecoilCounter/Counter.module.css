@@ -1,0 +1,10 @@
+.RecoilCounter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.RecoilCounter output {
+  font-size: 40px;
+  font-weight: 200;
+}
