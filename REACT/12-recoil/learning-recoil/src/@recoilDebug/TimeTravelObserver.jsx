@@ -1,9 +1,12 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useGotoRecoilSnapshot, useRecoilSnapshot } from 'recoil';
 
-export default function TimeTravelObserver() {
+export default function TimeTravelObserver({
+  visible: initialVisible = false,
+  shortcut: shortcutKey = 'z',
+}) {
   const [snapshots, setSnapshots] = useState([]);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(initialVisible);
 
   const snapshot = useRecoilSnapshot();
 
@@ -15,13 +18,17 @@ export default function TimeTravelObserver() {
   }, [snapshot]);
 
   useLayoutEffect(() => {
-    document.addEventListener('keyup', (e) => {
-      if (e.shiftKey && e.altKey && e.key.toLowerCase('z')) {
-        console.log('shift + alt + z');
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.shiftKey &&
+        e.altKey &&
+        e.code.toLowerCase().replace(/key/, '') === shortcutKey
+      ) {
+        // console.log(`shift + alt + ${shortcutKey}`);
         setVisible((visible) => !visible);
       }
     });
-  }, []);
+  }, [shortcutKey]);
 
   const gotoSnapshot = useGotoRecoilSnapshot();
 
@@ -31,7 +38,8 @@ export default function TimeTravelObserver() {
         <h2 style={headingStyle}>
           Recoil — Time Travel Observer
           <span style={infoStyle}>
-            <span style={iconStyle}>⌨️</span> 토글 : <b>Shift + Alt + Z</b>
+            <span style={iconStyle}>⌨️</span> 토글 :{' '}
+            <b>Shift + Alt + {shortcutKey}</b>
           </span>
         </h2>
       </div>
