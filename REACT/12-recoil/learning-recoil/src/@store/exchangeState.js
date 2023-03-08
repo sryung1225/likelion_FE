@@ -12,7 +12,20 @@ export const wonState = atom({
 
 // 셀렉터 = 파생된 상태 계산 값 반환
 // - 순수 함수
-// - 읽기 전용
+// - 읽기/쓰기
+
+/* 셀렉터 (GET) ---------------------------------------------------------------- */
+export const dollerGetState = selector({
+  key: 'dollerGetState',
+  get: ({ get }) => {
+    const won = get(wonState);
+    const exchangeRate = get(exchangeRateState);
+    const doller = won * exchangeRate;
+    return doller.toFixed(6);
+  },
+});
+
+/* 셀렉터 (GET/SET) ------------------------------------------------------------ */
 export const dollerState = selector({
   key: 'dollerState',
   get: ({ get }) => {
@@ -20,5 +33,10 @@ export const dollerState = selector({
     const exchangeRate = get(exchangeRateState);
     const doller = won * exchangeRate;
     return doller.toFixed(6); // 소수점 6자리
+  },
+  set: ({ get, set }, newValue) => {
+    const exchangeRate = get(exchangeRateState);
+    const wonValue = Number(newValue) / exchangeRate;
+    set(wonState, Math.round(wonValue));
   },
 });

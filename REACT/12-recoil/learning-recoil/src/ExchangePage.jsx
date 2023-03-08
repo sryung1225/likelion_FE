@@ -1,11 +1,11 @@
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { dollerState, exchangeRateState, wonState } from './@store/exchangeState';
 
 export default function ExchangePage() {
 
   const [exchangeRate, setExchangeRate] = useRecoilState(exchangeRateState);
   const [won, setWon] = useRecoilState(wonState);
-  const doller = useRecoilValue(dollerState);
+  const [doller, setDoller] = useRecoilState(dollerState);
 
   return (
     <div>
@@ -37,7 +37,7 @@ export default function ExchangePage() {
           <input
             type="text"
             value={doller}
-            readOnly
+            onChange={(e) => setDoller(Number(e.target.value))}
           />
         </label>
       </div>
