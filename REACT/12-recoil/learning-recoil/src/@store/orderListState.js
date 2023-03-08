@@ -1,8 +1,10 @@
-import { atom, atomFamily /* selector */ } from 'recoil';
+import { atom, atomFamily, selector } from 'recoil';
 
 const initialOrderList = [
   { id: 'order-1', order: '아메리카노', price: 4800 },
   { id: 'order-2', order: '그린티 프라푸치노', price: 6200 },
+  { id: 'order-3', order: '자바칩 프라푸치노', price: 6100 },
+  { id: 'order-4', order: '믹스커피', price: 3500 },
 ];
 
 // static routing
@@ -45,3 +47,11 @@ export const selectedOrderId = atom({
 //     return orderList[1];
 //   },
 // });
+
+export const orderListTotalCountState = selector({
+  key: 'orderListTotalCountState',
+  get: ({ get }) => {
+    const orderList = get(orderListState);
+    return orderList.length;
+  },
+});
