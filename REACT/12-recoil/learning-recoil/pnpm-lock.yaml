@@ -9,7 +9,8 @@ specifiers:
   eslint-plugin-react-hooks: ^4.6.0
   react: ^18.2.0
   react-dom: ^18.2.0
-  recoil: ^0.7.7
+  recoil: ^0.7.3
+  recoil-devtools-logger: ^0.4.0
   vite: ^4.1.0
 
 dependencies:
@@ -24,6 +25,7 @@ devDependencies:
   eslint: 8.35.0
   eslint-plugin-react: 7.32.2_eslint@8.35.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.35.0
+  recoil-devtools-logger: 0.4.0_react@18.2.0+recoil@0.7.7
   vite: 4.1.4
 
 packages:
@@ -784,6 +786,10 @@ packages:
       ms: 2.1.2
     dev: true
 
+  /deep-diff/1.0.2:
+    resolution: {integrity: sha512-aWS3UIVH+NPGCD1kki+DCU9Dua032iSsO43LqQpcs4R3+dVv7tX0qBGjiVHJHjplsoUM2XRO/KB92glqc68awg==}
+    dev: true
+
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
@@ -1216,7 +1222,6 @@ packages:
 
   /hamt_plus/1.0.2:
     resolution: {integrity: sha512-t2JXKaehnMb9paaYA7J0BX8QQAY8lwfQ9Gjf4pg/mk4krt+cmwmU652HOoWonf+7+EQV97ARPMhhVgU1ra2GhA==}
-    dev: false
 
   /has-bigints/1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
@@ -1681,7 +1686,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -1697,7 +1701,18 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
+
+  /recoil-devtools-logger/0.4.0_react@18.2.0+recoil@0.7.7:
+    resolution: {integrity: sha512-kBirm92++6T3QeIjhIn8ewaAHcUGSpXZOfFeBygAGNnEkcrrHaXhMslwpLsLIO89Z/yg+F5q2SJjAdyuNvOznA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      recoil: ^0.4.0
+    dependencies:
+      deep-diff: 1.0.2
+      react: 18.2.0
+      recoil: 0.7.7_biqbaboplfbrettd7655fr4n2y
+    dev: true
 
   /recoil/0.7.7_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-8Og5KPQW9LwC577Vc7Ug2P0vQshkv1y3zG3tSSkWMqkWSwHmE+by06L8JtnGocjW6gcCvfwB3YtrJG6/tWivNQ==}
@@ -1714,7 +1729,6 @@ packages:
       hamt_plus: 1.0.2
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-    dev: false
 
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
@@ -1791,7 +1805,6 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
