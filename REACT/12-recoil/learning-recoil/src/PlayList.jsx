@@ -1,4 +1,4 @@
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useResetRecoilState } from 'recoil';
 import { playListState } from './@store/playListState';
 
 export default function PlayList() {
@@ -36,4 +36,21 @@ const listStyle = {
   alignItems: 'center',
   gap: 20,
   marginBottom: 20,
+};
+
+export function RestPlayListButton() {
+  const handleRestPlayList = useResetRecoilState(playListState);
+
+  return (
+    <button type="button" style={buttonStyle} onClick={handleRestPlayList}>
+      플레이리스트 초기화
+    </button>
+  );
+}
+
+const buttonStyle = {
+  position: 'fixed',
+  right: 20,
+  top: '50%',
+  translate: '0 -50%',
 };

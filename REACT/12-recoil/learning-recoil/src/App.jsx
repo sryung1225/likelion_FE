@@ -1,7 +1,7 @@
 import './App.css';
 import AppFooter from './AppFooter';
 import AppHeader from './AppHeader';
-import PlayList from './PlayList';
+import PlayList, { RestPlayListButton } from './PlayList';
 
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <AppHeader />
       <PlayList />
       <AppFooter />
+      <RestPlayListButton />
     </div>
   );
 }
