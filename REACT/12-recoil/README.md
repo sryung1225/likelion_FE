@@ -12,8 +12,8 @@
 - [x] useRecoilValue
 - [x] useSetRecoilState
 - [x] useResetRecoilState
-- [ ] useRecoilValueLoadable
+- [x] useRecoilValueLoadable
 - [ ] useRecoilCallback
-- [ ] Recoil 개발 도구
+- [X] Recoil 개발 도구
   - [x] Recoil Logger
   - [x] Recoil Debug
