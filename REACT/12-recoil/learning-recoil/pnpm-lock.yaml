@@ -12,6 +12,7 @@ specifiers:
   react-dom: ^18.2.0
   recoil: ^0.7.3
   recoil-devtools-logger: ^0.4.0
+  recoil-persist: ^4.2.0
   vite: ^4.1.0
 
 dependencies:
@@ -19,6 +20,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   recoil: 0.7.7_biqbaboplfbrettd7655fr4n2y
+  recoil-persist: 4.2.0_recoil@0.7.7
 
 devDependencies:
   '@types/react': 18.0.28
@@ -1719,6 +1721,14 @@ packages:
       react: 18.2.0
       recoil: 0.7.7_biqbaboplfbrettd7655fr4n2y
     dev: true
+
+  /recoil-persist/4.2.0_recoil@0.7.7:
+    resolution: {integrity: sha512-MHVfML9GxJP3RpkKR4F5rp7DtvzIvjWhowtMao/b7h2k4afMio/4sMAdUtltIrDaeVegH0Iga8Sx5XQ3oD7CzA==}
+    peerDependencies:
+      recoil: ^0.7.2
+    dependencies:
+      recoil: 0.7.7_biqbaboplfbrettd7655fr4n2y
+    dev: false
 
   /recoil/0.7.7_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-8Og5KPQW9LwC577Vc7Ug2P0vQshkv1y3zG3tSSkWMqkWSwHmE+by06L8JtnGocjW6gcCvfwB3YtrJG6/tWivNQ==}
